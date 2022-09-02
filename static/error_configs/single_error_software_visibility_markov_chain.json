@@ -33,6 +33,10 @@
           "model": "markov_chain",
           "require_error_history": 1,
           "params": {
+            "num_state": {
+              "function_model": "unit_step",
+              "value": 2
+            },
             "state[0]": {
               "function_model": "unit_step",
               "value": true
@@ -41,19 +45,19 @@
               "function_model": "unit_step",
               "value": false
             },
-            "transition[00]": {
+            "transition[0-0]": {
               "function_model": "unit_step",
               "value": 0.8
             },
-            "transition[01]": {
+            "transition[0-1]": {
               "function_model": "unit_step",
               "value": 0.2
             },
-            "transition[10]": {
+            "transition[1-0]": {
               "function_model": "unit_step",
               "value": 0.8
             },
-            "transition[11]": {
+            "transition[1-1]": {
               "function_model": "unit_step",
               "value": 0.2
             }
