@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Perception Error Modeling Framework</title>
+    <link rel="stylesheet" href="libs/bootstrap-5.2.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="static/css/main.css">
+</head>
+
+<body>
+
+<div class="container">
+    <div class="jumbotron jumbotron-fluid text-center image-title">
+        <div class="title-background"></div>
+        <div class="title-background-overlay"></div>
+        <div class="container title-content">
+            <h1 class="display-1">Perception Error Modeling</h1>
+            <p class="lead">A Perception Error Modeling Framework for Autonomous Driving System Testing</p>
+        </div>
+    </div>
+
+    <!--    <section class="container">-->
+    <!--        <div class="row">-->
+    <!--            <h2>Flowchart of ATLAS</h2>-->
+    <!--        </div>-->
+    <!--        <div class="row mb-5">-->
+    <!--            <div class="col d-flex flex-row justify-content-center">-->
+    <!--                <img src="static/media/atlas-diagram-ase-nier.svg" alt="ATLAS TESTING FLOWCHART" width="100%">-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--        <div class="row">-->
+    <!--            <div class="col">-->
+    <!--                <ul>-->
+    <!--                    <li class="mb-3"><strong>HD Map</strong> HD Map contains the essential information of the-->
+    <!--                        elements in the traffic network, e.g. traffic lanes, roads and junctions. Currently there-->
+    <!--                        are two main format, <a-->
+    <!--                                href="https://www.asam.net/standards/detail/opendrive/">OpenDRIVE</a>-->
+    <!--                        and <a-->
+    <!--                                href="https://www.mrt.kit.edu/z/publ/download/2018/Poggenhans2018Lanelet2.pdf">Lanelet-->
+    <!--                            2</a>.-->
+    <!--                        Apollo HD maps are customized version of the OpenDRIVE specification, saved in binary form-->
+    <!--                        using-->
+    <!--                        <a href="https://developers.google.com/protocol-buffers">Protobuf</a> tools.-->
+    <!--                        ATLAS parses the binary files directly.-->
+    <!--                    </li>-->
+    <!--                    <li class="mb-3"><strong>Junction Lane Classification</strong> After the information of lanes,-->
+    <!--                        roads and junctions are extracted from the HD map files, ATLAS calcuates the topology-->
+    <!--                        feature characteristics of the junction lanes. Based on the topology features, ATLAS-->
+    <!--                        classifies the junction lanes into different classes. From each class, ATLAS samples one-->
+    <!--                        lane, which will be used to generate a topology-based scenario and test cases.-->
+    <!--                    </li>-->
+    <!--                    <li class="mb-3"><strong>Test Case Generation</strong> Each selected junction lane generates one-->
+    <!--                        scenario by assigning the ego vehicle to move along the select lane and NPCs to its-->
+    <!--                        intersecting junction lanes. ATLAS initializes the target position of the ego vehicle and-->
+    <!--                        the start positions of NPCs and paraterizes the scenario by the start position of the ego-->
+    <!--                        vehicle and the constant speeds of NPCs. After the paramters are initialized, ATLAS applies-->
+    <!--                        Genetic Algorithm to search through the parameter spaces towards potential collision test-->
+    <!--                        cases under the guidance of the fitness values, which is calcuated based on the trajectories-->
+    <!--                        returned from the ADS.-->
+    <!--                    </li>-->
+    <!--                    <li class="mb-3"><strong>Simulation Environment (Simulator + ADS)</strong> ATLAS is evaluated on-->
+    <!--                        Baidu Apollo 6.0-->
+    <!--                        and-->
+    <!--                        LGSVL-->
+    <!--                        Simulator (2020.06). ATLAS communicates with Apollo and Simulator through socket connection-->
+    <!--                        during test case execution.-->
+    <!--                    </li>-->
+    <!--                </ul>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </section>-->
+
+    <!--    <section class="container">-->
+    <!--        <div class="row">-->
+    <!--            <h2>Junction Lane Classification</h2>-->
+    <!--        </div>-->
+    <!--        <div class="row">-->
+    <!--            <div class="col-sm">-->
+    <!--                <img src="static/media/san_francisco_cut.png" alt="San Francisco Map" width="100%">-->
+    <!--            </div>-->
+    <!--            <div class="col-sm">-->
+    <!--                <a href="https://content.lgsvlsimulator.com/maps/sanfrancisco/">-->
+    <!--                    <h5>San Francisco</h5>-->
+    <!--                </a>-->
+    <!--                <p>The map contains 90 junctions, including:</p>-->
+    <!--                <ul>-->
+    <!--                    <li>84 signal-controlled junctions</li>-->
+    <!--                    <li>6 stop-sign controlled junctions</li>-->
+    <!--                </ul>-->
+    <!--                <p>In 84 signal-controlled junctions, there are</p>-->
+    <!--                <ul>-->
+    <!--                    <li>786 junction lanes in total</li>-->
+    <!--                    <li>686 junction lanes intersected by other junction lanes</li>-->
+    <!--                </ul>-->
+    <!--                <p>From 686 junction lanes, <b><i>ATLAS</i></b> produces: </p>-->
+    <!--                <ul>-->
+    <!--                    <li>34 junction lane classes in total</li>-->
+    <!--                    <li>13 junction lane classes selected for testing</li>-->
+    <!--                </ul>-->
+    <!--                <p>As a result, <b><i>ATLAS</i></b> run testing on 13 junction lanes (one lane per selected class).-->
+    <!--                </p>-->
+    <!--                <p>The details of junction lane classification are shown in table below.</p>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--        <div class="row flex-row justify-content-center mt-3">-->
+    <!--            <table class="table table-sm w-75">-->
+    <!--                <caption class="text-center">13 Selected Junction Lane Classes</caption>-->
+    <!--                <thead>-->
+    <!--                <tr>-->
+    <!--                    <th scope="col">Junction Lane Class</th>-->
+    <!--                    <th scope="col">Intersection Vector</th>-->
+    <!--                    <th scope="col">Number of Lanes</th>-->
+    <!--                </tr>-->
+    <!--                </thead>-->
+    <!--                <tbody>-->
+    <!--                <tr>-->
+    <!--                    <th scope="row">𝒥<sub>657</sub></th>-->
+    <!--                    <td>4=>-3&emsp;4=>-2</td>-->
+    <!--                    <td>24</td>-->
+    <!--                </tr>-->
+    <!--                <tr>-->
+    <!--                    <th scope="row">𝒥<sub>663</sub></th>-->
+    <!--                    <td>2=>-4&emsp;2=>-3</td>-->
+    <!--                    <td>25</td>-->
+    <!--                </tr>-->
+    <!--                <tr>-->
+    <!--                    <th scope="row">𝒥<sub>676</sub></th>-->
+    <!--                    <td>3=>-5&emsp;6=>-4&emsp;6=>-2</td>-->
+    <!--                    <td>51</td>-->
+    <!--                </tr>-->
+    <!--                <tr>-->
+    <!--                    <th scope="row">𝒥<sub>679</sub></th>-->
+    <!--                    <td>2=>-6&emsp;2=>-5&emsp;2=>-3</td>-->
+    <!--                    <td>16</td>-->
+    <!--                </tr>-->
+    <!--                <tr>-->
+    <!--                    <th scope="row">𝒥<sub>682</sub></th>-->
+    <!--                    <td>3=>-5&emsp;3=>-4&emsp;6=>-2</td>-->
+    <!--                    <td>19</td>-->
+    <!--                </tr>-->
+    <!--                <tr>-->
+    <!--                    <th scope="row">𝒥<sub>686</sub></th>-->
+    <!--                    <td>4=>-2&emsp;5=>-3&emsp;5=>-2</td>-->
+    <!--                    <td>17</td>-->
+    <!--                </tr>-->
+    <!--                <tr>-->
+    <!--                    <th scope="row">𝒥<sub>688</sub></th>-->
+    <!--                    <td>2=>-6&emsp;2=>-5&emsp;4=>-6</td>-->
+    <!--                    <td>32</td>-->
+    <!--                </tr>-->
+    <!--                <tr>-->
+    <!--                    <th scope="row">𝒥<sub>1066</sub></th>-->
+    <!--                    <td>2=>-3&emsp;4=>-3</td>-->
+    <!--                    <td>4</td>-->
+    <!--                </tr>-->
+    <!--                <tr>-->
+    <!--                    <th scope="row">𝒥<sub>1070</sub></th>-->
+    <!--                    <td>2=>-4&emsp;3=>-4</td>-->
+    <!--                    <td>4</td>-->
+    <!--                </tr>-->
+    <!--                <tr>-->
+    <!--                    <th scope="row">𝒥<sub>1071</sub></th>-->
+    <!--                    <td>3=>-2&emsp;4=>-2</td>-->
+    <!--                    <td>4</td>-->
+    <!--                </tr>-->
+    <!--                <tr>-->
+    <!--                    <th scope="row">𝒥<sub>1438</sub></th>-->
+    <!--                    <td>3=>-8&emsp;3=>-6&emsp;5=>-2&emsp;7=>-4&emsp;7=>-2</td>-->
+    <!--                    <td>12</td>-->
+    <!--                </tr>-->
+    <!--                <tr>-->
+    <!--                    <th scope="row">𝒥<sub>1439</sub></th>-->
+    <!--                    <td>3=>-8&emsp;3=>-6&emsp;3=>-4&emsp;5=>-2&emsp;7=>-2</td>-->
+    <!--                    <td>12</td>-->
+    <!--                </tr>-->
+    <!--                <tr>-->
+    <!--                    <th scope="row">𝒥<sub>1440</sub></th>-->
+    <!--                    <td>3=>-8&emsp;3=>-6&emsp;5=>-8&emsp;7=>-4&emsp;7=>-2</td>-->
+    <!--                    <td>12</td>-->
+    <!--                </tr>-->
+    <!--                </tbody>-->
+    <!--            </table>-->
+    <!--        </div>-->
+    <!--    </section>-->
+
+    <!--    <section class="container" id="diagram-container">-->
+    <!--        <div class="row">-->
+    <!--            <h2>Junction Lane Class Topology Diagram</h2>-->
+    <!--        </div>-->
+
+    <!--        <div class="row flex-row justify-content-center">-->
+    <!--            <div class="topology-diagram">-->
+    <!--                <img src="static/media/junction_lane_diagrams/657.svg" class="card-img-top"-->
+    <!--                     alt="JLG&#45;&#45;657 SVG diagram">-->
+    <!--                <div class="card-body">-->
+    <!--                    <p class="card-text text-center">𝒥<sub>657</sub></p>-->
+    <!--                </div>-->
+    <!--            </div>-->
+
+    <!--            <div class="topology-diagram">-->
+    <!--                <img src="static/media/junction_lane_diagrams/663.svg" class="card-img-top"-->
+    <!--                     alt="JLG&#45;&#45;663 SVG diagram">-->
+    <!--                <div class="card-body">-->
+    <!--                    <p class="card-text text-center">𝒥<sub>663</sub></p>-->
+    <!--                </div>-->
+    <!--            </div>-->
+
+    <!--            <div class="topology-diagram">-->
+    <!--                <img src="static/media/junction_lane_diagrams/676.svg" class="card-img-top"-->
+    <!--                     alt="JLG&#45;&#45;676 SVG diagram">-->
+    <!--                <div class="card-body">-->
+    <!--                    <p class="card-text text-center">𝒥<sub>676</sub></p>-->
+    <!--                </div>-->
+    <!--            </div>-->
+
+    <!--            <div class="topology-diagram">-->
+    <!--                <img src="static/media/junction_lane_diagrams/679.svg" class="card-img-top"-->
+    <!--                     alt="JLG&#45;&#45;679 SVG diagram">-->
+    <!--                <div class="card-body">-->
+    <!--                    <p class="card-text text-center">𝒥<sub>679</sub></p>-->
+    <!--                </div>-->
+    <!--            </div>-->
+
+    <!--            <div class="topology-diagram">-->
+    <!--                <img src="static/media/junction_lane_diagrams/682.svg" class="card-img-top"-->
+    <!--                     alt="JLG&#45;&#45;682 SVG diagram">-->
+    <!--                <div class="card-body">-->
+    <!--                    <p class="card-text text-center">𝒥<sub>682</sub></p>-->
+    <!--                </div>-->
+    <!--            </div>-->
+
+    <!--            <div class="topology-diagram">-->
+    <!--                <img src="static/media/junction_lane_diagrams/686.svg" class="card-img-top"-->
+    <!--                     alt="JLG&#45;&#45;686 SVG diagram">-->
+    <!--                <div class="card-body">-->
+    <!--                    <p class="card-text text-center">𝒥<sub>686</sub></p>-->
+    <!--                </div>-->
+    <!--            </div>-->
+
+    <!--            <div class="topology-diagram">-->
+    <!--                <img src="static/media/junction_lane_diagrams/topo-diagram-legends.svg" class="card-img-top legends"-->
+    <!--                     style="height: 8.5rem;" alt="Legends">-->
+    <!--            </div>-->
+    <!--        </div>-->
+
+    <!--        <div class="row flex-row justify-content-center">-->
+
+    <!--            <div class="topology-diagram">-->
+    <!--                <img src="static/media/junction_lane_diagrams/688.svg" class="card-img-top"-->
+    <!--                     alt="JLG&#45;&#45;688 SVG diagram">-->
+    <!--                <div class="card-body">-->
+    <!--                    <p class="card-text text-center">𝒥<sub>688</sub></p>-->
+    <!--                </div>-->
+    <!--            </div>-->
+
+    <!--            <div class="topology-diagram">-->
+    <!--                <img src="static/media/junction_lane_diagrams/1066.svg" class="card-img-top"-->
+    <!--                     alt="JLG&#45;&#45;1066 SVG diagram">-->
+    <!--                <div class="card-body">-->
+    <!--                    <p class="card-text text-center">𝒥<sub>1066</sub></p>-->
+    <!--                </div>-->
+    <!--            </div>-->
+
+    <!--            <div class="topology-diagram">-->
+    <!--                <img src="static/media/junction_lane_diagrams/1070.svg" class="card-img-top"-->
+    <!--                     alt="JLG&#45;&#45;1070 SVG diagram">-->
+    <!--                <div class="card-body">-->
+    <!--                    <p class="card-text text-center">𝒥<sub>1070</sub></p>-->
+    <!--                </div>-->
+    <!--            </div>-->
+
+    <!--            <div class="topology-diagram">-->
+    <!--                <img src="static/media/junction_lane_diagrams/1071.svg" class="card-img-top"-->
+    <!--                     alt="JLG&#45;&#45;1071 SVG diagram">-->
+    <!--                <div class="card-body">-->
+    <!--                    <p class="card-text text-center">𝒥<sub>1071</sub></p>-->
+    <!--                </div>-->
+    <!--            </div>-->
+
+    <!--            <div class="topology-diagram">-->
+    <!--                <img src="static/media/junction_lane_diagrams/1438.svg" class="card-img-top"-->
+    <!--                     alt="JLG&#45;&#45;1438 SVG diagram">-->
+    <!--                <div class="card-body">-->
+    <!--                    <p class="card-text text-center">𝒥<sub>1438</sub></p>-->
+    <!--                </div>-->
+    <!--            </div>-->
+
+    <!--            <div class="topology-diagram">-->
+    <!--                <img src="static/media/junction_lane_diagrams/1439.svg" class="card-img-top"-->
+    <!--                     alt="JLG&#45;&#45;1439 SVG diagram">-->
+    <!--                <div class="card-body">-->
+    <!--                    <p class="card-text text-center">𝒥<sub>1439</sub></p>-->
+    <!--                </div>-->
+    <!--            </div>-->
+
+    <!--            <div class="topology-diagram">-->
+    <!--                <img src="static/media/junction_lane_diagrams/1440.svg" class="card-img-top"-->
+    <!--                     alt="JLG&#45;&#45;1440 SVG diagram">-->
+    <!--                <div class="card-body">-->
+    <!--                    <p class="card-text text-center">𝒥<sub>1440</sub></p>-->
+    <!--                </div>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </section>-->
+
+    <!--    <section class="container">-->
+    <!--        <div class="row">-->
+    <!--            <div class="col">-->
+    <!--                <h2>Apollo Issues Discovered</h2>-->
+    <!--                <p>Note that when Apollo's bounding box (not 3D model) intersects with any obstacle's bounding box,-->
+    <!--                    a-->
+    <!--                    <b>collision</b> occurs.-->
+    <!--                    <br>The bounding box is a bit larger than Apollo's 3D model showing in the video (i.e. Apollo's-->
+    <!--                    website-based human machine interface).-->
+    <!--                    <br>As a result, <b>collision</b> may trigger even when there is slight gap between Apollo's 3D-->
+    <!--                    model and-->
+    <!--                    obstacle's bounding box.-->
+    <!--                </p>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--        <div class="media">-->
+    <!--            <video id="soft-braking-video" width="50%" controls class="align-self-start mr-3">-->
+    <!--                <source src="static/media/issues_videos/soft-braking-run12-ga-jlg1439.mp4" type="video/mp4">-->
+    <!--                Your browser does not support the video tag.-->
+    <!--            </video>-->
+    <!--            <div class="media-body">-->
+    <!--                <h5 class="mt-0">1) Soft Braking in Emergencies</h5>-->
+    <!--                <p>Apollo's braking power is capped at 50% by default configuration. In some emergency situations,-->
+    <!--                    e.g., where a stopped NPC vehicle suddenly crosses, the ego vehicle brakes too gently and-->
+    <!--                    collides-->
+    <!--                    with the NPC. Those collisions could have been avoided with full braking power.</p>-->
+    <!--                <p><b>Video description</b></p>-->
+    <!--                <p>The ego vehicle must brake immediately-->
+    <!--                    when the NPC vehicles start their motion at around-->
+    <!--                    <i class="ts" data-target="soft-braking-video" data-value="2">2s</i>.-->
+    <!--                    However, the ego brakes too softly capped at 50% of the maximal braking force.-->
+    <!--                    Thus, a collision occurs at (<i class="ts" data-target="soft-braking-video"-->
+    <!--                                                    data-value="5">5s</i>).-->
+    <!--                    Had the ego vehicle braked with 100% braking force, it could have stopped where-->
+    <!--                    the planned trajectory ends (<i class="ts" data-target="soft-braking-video"-->
+    <!--                                                    data-value="4.3">5s</i>)-->
+    <!--                    and avoided the collision.-->
+    <!--                </p>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--        <div class="media">-->
+    <!--            <video id="wrong-overtake-video" width="50%" controls class="align-self-start mr-3">-->
+    <!--                <source src="static/media/issues_videos/wrong-overtake-run2-ga-jlg676.mp4" type="video/mp4">-->
+    <!--                Your browser does not support the video tag.-->
+    <!--            </video>-->
+    <!--            <div class="media-body">-->
+    <!--                <h5 class="mt-0">2) Wrong Overtaking Actions</h5>-->
+    <!--                <p>Apollo often fails to overtake and collides with slow NPC vehicles. It is safe for the ego-->
+    <!--                    vehicle to-->
+    <!--                    yield instead of trying to overtake even though it may have the right of way.</p>-->
+    <!--                <p><b>Video description</b></p>-->
+    <!--                <p>-->
+    <!--                    When approaching the junction, Apollo notices the crossing NPCs from left are relative slow, and-->
+    <!--                    thus decides to overtake instead of giving way.-->
+    <!--                    (<i class="ts" data-target="wrong-overtake-video" data-value="3.5">3s</i>), Apollo decides to-->
+    <!--                    "overtake" the crossing vehicles as they are moving relatively slow.-->
+    <!--                    At <i class="ts" data-target="wrong-overtake-video" data-value="6.5">6s</i>, the ego vehicle-->
+    <!--                    nearly bypasses the first NPC<sub>10000</sub> which is already quite dangerous. Soon the ego-->
+    <!--                    vehicle decides to yield to the second NPC<sub>10003</sub>-->
+    <!--                    (<i class="ts" data-target="wrong-overtake-video" data-value="7">7s</i>).-->
+    <!--                    However, the speed (36km/h) is too fast to avoid the collision at-->
+    <!--                    (<i class="ts" data-target="wrong-overtake-video" data-value="7.8">8s</i>).-->
+    <!--                    The collision could have be avoided had the ego braked early-->
+    <!--                    (<i class="ts" data-target="wrong-overtake-video" data-value="3">3s</i>)-->
+    <!--                    and yielded to the two NPC vehicles.-->
+    <!--                </p>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--        <div class="media">-->
+    <!--            <video id="wrong-trajectory-a-video" width="50%" controls class="align-self-start mr-3">-->
+    <!--                <source src="static/media/issues_videos/wrong-trajectory-a-run4-ga-jlg663-2.mp4" type="video/mp4">-->
+    <!--                Your browser does not support the video tag.-->
+    <!--            </video>-->
+    <!--            <div class="media-body">-->
+    <!--                <h5 class="mt-0">3) Wrong Intersecting Trajectory</h5>-->
+    <!--                <p>-->
+    <!--                    In some situations, Apollo's planning module produces incorrect trajectories that intersect with-->
+    <!--                    NPCs' driving path. Collision is thus inevitable when the control module adheres to the planned-->
+    <!--                    trajectory.-->
+    <!--                </p>-->
+    <!--                <p><b>Video description</b></p>-->
+    <!--                <p>-->
+    <!--                    When Apollo decides to yield to the crossing NPC vehicles at-->
+    <!--                    (<i class="ts" data-target="wrong-trajectory-a-video" data-value="2.5">2s</i>),-->
+    <!--                    it can still manage to stop before NPC<sub>10003</sub>'s driving lane with full braking power.-->
+    <!--                    However, instead of yielding to the nearest NPC<sub>10003</sub>, it yields to-->
+    <!--                    NPC<sub>10002</sub>.-->
+    <!--                    This decision results in Apollo's trajectory cutting into NPC<sub>10003</sub>'s driving path,-->
+    <!--                    which-->
+    <!--                    eventually leads to the collision at-->
+    <!--                    <i class="ts" data-target="wrong-trajectory-a-video" data-value="4.5">4s</i>.-->
+    <!--                </p>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--        <div class="media">-->
+    <!--            <video id="deadlock-video" width="50%" controls class="align-self-start mr-3">-->
+    <!--                <source src="static/media/issues_videos/deadlock-run15-ga-jlg1439-1.mp4" type="video/mp4">-->
+    <!--                Your browser does not support the video tag.-->
+    <!--            </video>-->
+    <!--            <div class="media-body">-->
+    <!--                <h5 class="mt-0">4) Deadlock</h5>-->
+    <!--                <p>-->
+    <!--                    Apollo has not implemented deadlock detection and resolution strategies. When Apollo gets-->
+    <!--                    trapped in-->
+    <!--                    a deadlock with nearby NPC vehicles inside a junction, it cannot reroute a fallback path, thus-->
+    <!--                    jamming the traffic forever.-->
+    <!--                </p>-->
+    <!--                <p><b>Video description</b></p>-->
+    <!--                <p>-->
+    <!--                    After entering the junction (<i class="ts" data-target="deadlock-video" data-value="3">3s</i>),-->
+    <!--                    Apollo yields to NPC<sub>10003</sub> by deceleration. When Apollo comes to a complete stop, it-->
+    <!--                    partially blocks NPC<sub>10000</sub>'s path-->
+    <!--                    (<i class="ts" data-target="deadlock-video" data-value="6">6s</i>). When NPC<sub>10000</sub>-->
+    <!--                    stops-->
+    <!--                    to avoid collision with Apollo, it happens to block NPC<sub>10004</sub>'s path-->
+    <!--                    (<i class="ts" data-target="deadlock-video" data-value="11">11s</i>). Eventually the three-->
+    <!--                    vehicles stop and block one another.-->
+    <!--                    Since neither Apollo nor NPC controller has implemented the deadlock recognition and resolution-->
+    <!--                    strategies, e.g. reversing or nudging from the side, they get trapped in the deadlock and jam-->
+    <!--                    the-->
+    <!--                    traffic forever.-->
+    <!--                </p>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--        <div class="media">-->
+    <!--            <video id="wrong-prediction-video" width="50%" controls class="align-self-start mr-3">-->
+    <!--                <source src="static/media/issues_videos/wrong-prediction-run3-ga-jlg686.mp4" type="video/mp4">-->
+    <!--                Your browser does not support the video tag.-->
+    <!--            </video>-->
+    <!--            <div class="media-body">-->
+    <!--                <h5 class="mt-0">5) Wrong Prediction</h5>-->
+    <!--                <p>-->
+    <!--                    In a few cases, Apollo's prediction module produces incorrect path predictions of crossing NPC-->
+    <!--                    vehicles nearby, greatly affecting planning module's decision and eventually leading to-->
+    <!--                    collisions.-->
+    <!--                </p>-->
+    <!--                <p><b>Video description</b></p>-->
+    <!--                <p>-->
+    <!--                    When Apollo approaches the junction, it predicts NPC<sub>10006</sub> to drive straight across-->
+    <!--                    the-->
+    <!--                    junction (<i class="ts" data-target="wrong-prediction-video" data-value="3">3s</i>).-->
+    <!--                    After Apollo enters the junction, NPC<sub>10006</sub> starts to turn left and its predicted-->
+    <!--                    trajectory is apparently mis-aligned with its moving direction-->
+    <!--                    (<i class="ts" data-target="wrong-prediction-video" data-value="3">3s</i>).-->
+    <!--                    This incorrect prediction of NPC<sub>10006</sub> makes Apollo to over-estimate the-->
+    <!--                    time-to-collision-->
+    <!--                    period with NPC<sub>10006</sub>, where Apollo decides to overtake instead of yielding to-->
+    <!--                    NPC<sub>10006</sub>.-->
+    <!--                    This eventually leads to collision at-->
+    <!--                    <i class="ts" data-target="wrong-prediction-video" data-value="6.5">6s</i>.-->
+    <!--                </p>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--        <div class="media">-->
+    <!--            <video id="planning-lag-video" width="50%" controls class="align-self-start mr-3">-->
+    <!--                <source src="static/media/issues_videos/planning-lag-run9-ga-jlg679.mp4" type="video/mp4">-->
+    <!--                Your browser does not support the video tag.-->
+    <!--            </video>-->
+    <!--            <div class="media-body">-->
+    <!--                <h5 class="mt-0">6) Planning Delay</h5>-->
+    <!--                <p>-->
+    <!--                    During four of the failed test cases, Apollo's planning module suddenly gets stuck and stops-->
+    <!--                    producing publishing new trajectories. This is unlikely to be caused by overloaded hardware-->
+    <!--                    since-->
+    <!--                    the simulator as well as other Apollo modules are operating as usual.-->
+    <!--                </p>-->
+    <!--                <p><b>Video description</b></p>-->
+    <!--                <p>-->
+    <!--                    When Apollo approaches the junction, it first stops and yields to the crossing NPC vehicles-->
+    <!--                    before-->
+    <!--                    (<i class="ts" data-target="planning-lag-video" data-value="6.5">6s</i>).-->
+    <!--                    After the faster NPC<sub>10001</sub> bypasses, Apollo decides to overtake the slower-->
+    <!--                    NPC<sub>10005</sub> (<i class="ts" data-target="planning-lag-video" data-value="7">7s</i>).-->
+    <!--                    However, after the "overtaking" trajectory is calculated and passed to the control module, the-->
+    <!--                    planning module gets stuck and stops publishing new trajectories (the delay being highlighted in-->
+    <!--                    red-->
+    <!--                    at Dreamview's "Module Delay" monitor)-->
+    <!--                    (<i class="ts" data-target="planning-lag-video" data-value="8.7">8s</i>).-->
+    <!--                    Furthermore, the control module, without realizing the abnormal delay from the planning module,-->
+    <!--                    follows the last trajectory it receives blindly and eventually collides with NPC<sub>10005</sub>-->
+    <!--                    (<i class="ts" data-target="planning-lag-video" data-value="9.3">9s</i>). <br>-->
+    <!--                    Based on our experiment results, when the planning module operates without delay, Apollo would-->
+    <!--                    soon-->
+    <!--                    changes its decision from overtaking to yielding to NPC<sub>10005</sub> and the collision would-->
+    <!--                    be-->
+    <!--                    avoided.-->
+    <!--                </p>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--        <div class="media">-->
+    <!--            <video id="traffic-accidents-video" width="50%" controls class="align-self-start mr-3">-->
+    <!--                <source src="static/media/issues_videos/traffic-accidents-run7-ga-jlg1070.mp4" type="video/mp4">-->
+    <!--                Your browser does not support the video tag.-->
+    <!--            </video>-->
+    <!--            <div class="media-body">-->
+    <!--                <h5 class="mt-0">7) Traffic Accidents</h5>-->
+    <!--                <p>-->
+    <!--                    Sometimes there are traffic accidents in the junction blocking the ego's way before it reaches.-->
+    <!--                    Apollo has not implemented traffic accident recognition and response strategies, and thus stops-->
+    <!--                    on-->
+    <!--                    the blocked route instead of re-routing a new path or nudging from the side.-->
+    <!--                </p>-->
+    <!--                <p><b>Video description</b></p>-->
+    <!--                <p>-->
+    <!--                    Apollo notices that two vehicles collide in the junction blocking its route, long before it-->
+    <!--                    enters-->
+    <!--                    the junction (<i class="ts" data-target="traffic-accidents-video" data-value="2">2s</i>).-->
+    <!--                    Instead-->
+    <!--                    of re-routing another valid path, such as driving straight across or nudging from the side,-->
+    <!--                    Apollo-->
+    <!--                    follows its original route then stops inside the junction forever.-->
+    <!--                    (<i class="ts" data-target="traffic-accidents-video" data-value="11">11s</i>).-->
+    <!--                </p>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--        <div class="media">-->
+    <!--            <video id="yield-to-overtake-video" width="50%" controls class="align-self-start mr-3">-->
+    <!--                <source src="static/media/issues_videos/yield-to-overtake-run9-ga-jlg688.mp4" type="video/mp4">-->
+    <!--                Your browser does not support the video tag.-->
+    <!--            </video>-->
+    <!--            <div class="media-body">-->
+    <!--                <h5 class="mt-0">8) Wrong Switch from Yielding to Overtaking</h5>-->
+    <!--                <p>-->
+    <!--                    In some cases, Apollo first yield then overtake the crossing NPC vehicles before they pass the-->
+    <!--                    collision region. This wrong switch of decision often results in collisions.-->
+    <!--                </p>-->
+    <!--                <p><b>Video description</b></p>-->
+    <!--                <p>-->
+    <!--                    When Apollo is about to turn left in the junction, it notices the approaching-->
+    <!--                    NPC<sub>10001</sub> from the opposite direction and decides to yield to it.-->
+    <!--                    (<i class="ts" data-target="yield-to-overtake-video" data-value="19">19s</i>). Then Apollo-->
+    <!--                    decides-->
+    <!--                    to overtake NPC<sub>10001</sub> as NPC<sub>10001</sub> is driving too slow-->
+    <!--                    (<i class="ts" data-target="yield-to-overtake-video" data-value="21">21s</i>). As-->
+    <!--                    NPC<sub>10001</sub> is approaching, Apollo switches its decision between "yielding" and-->
+    <!--                    "overtaking"-->
+    <!--                    many times (<i class="ts" data-target="yield-to-overtake-video" data-value="21">21s</i> ~-->
+    <!--                    <i class="ts" data-target="yield-to-overtake-video" data-value="23">23s</i>) This results in-->
+    <!--                    Apollo-->
+    <!--                    not being able to accelerate sufficiently and eventually stopping in NPC<sub>10001</sub>'s-->
+    <!--                    driving-->
+    <!--                    lane.-->
+    <!--                </p>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--        <div class="media">-->
+    <!--            <video id="prediction-error-video" width="50%" controls class="align-self-start mr-3">-->
+    <!--                <source src="static/media/issues_videos/prediction-error-run17-random-jlg676.mp4" type="video/mp4">-->
+    <!--                Your browser does not support the video tag.-->
+    <!--            </video>-->
+    <!--            <div class="media-body">-->
+    <!--                <h5 class="mt-0">9) Prediction Delay</h5>-->
+    <!--                <p>-->
+    <!--                    In this particular failed test case, Apollo's prediction module experiences a very long delay,-->
+    <!--                    which-->
+    <!--                    directly brings the planning module offline at the same time. Apollo's control module follows-->
+    <!--                    the-->
+    <!--                    old trajectory blindly and collides with crossing NPC vehicles.-->
+    <!--                </p>-->
+    <!--                <p><b>Video description</b></p>-->
+    <!--                <p>-->
+    <!--                    At <i class="ts" data-target="prediction-error-video" data-value="2">2s</i> when Apollo is-->
+    <!--                    approaching the junction, the prediction module suddenly goes offline and stops publishing-->
+    <!--                    prediction messages. Since the planning module strictly relies on the prediction message, it-->
+    <!--                    cannot-->
+    <!--                    calculate new trajectories any more. Then the control module does not notice this situation and-->
+    <!--                    follows the last planned trajectory it receives blindly, which results in the collision at-->
+    <!--                    <i class="ts" data-target="prediction-error-video" data-value="10">10s</i>.-->
+    <!--                </p>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </section>-->
+
+    <!--    <section class="container">-->
+    <!--        <div class="row">-->
+    <!--            <div class="col">-->
+    <!--                <h2>Simulator Issue Discovered</h2>-->
+    <!--                <p>-->
+    <!--                    The LGSVL simulator is still under rapid development and issues occur sometimes. Those issues-->
+    <!--                    causing collisions between NPC vehicles and Apollo are also recorded and analyzed, but Apollo is-->
+    <!--                    not-->
+    <!--                    held responsible for the collision.-->
+    <!--                </p>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--        <div class="media">-->
+    <!--            <video id="obstacle-failure-video" width="50%" controls class="align-self-start mr-3">-->
+    <!--                <source src="static/media/issues_videos/obstacle-failure-run2-ga-jlg1439.mp4" type="video/mp4">-->
+    <!--                Your browser does not support the video tag.-->
+    <!--            </video>-->
+    <!--            <div class="media-body">-->
+    <!--                <h5 class="mt-0">10) Obstacle Failure</h5>-->
+    <!--                <p>-->
+    <!--                    The NPC controllers implemented in LGSVL simulator are relatively naive. When the NPCs gets-->
+    <!--                    knocked-->
+    <!--                    out of their designed path after a collision, the controllers cannot bring them back on track-->
+    <!--                    and-->
+    <!--                    often starts to drive randomly (what appears to be reckless driving).-->
+    <!--                </p>-->
+    <!--                <p><b>Video description</b></p>-->
+    <!--                <p>-->
+    <!--                    When Apollo is about to enter the junction at-->
+    <!--                    <i class="ts" data-target="obstacle-failure-video" data-value="3">3s</i>, NPC<sub>10005</sub>-->
+    <!--                    and-->
+    <!--                    NPC<sub>10001</sub> collides in the junction. Since the NPC controllers. This and subsequent-->
+    <!--                    collision on NPC<sub>10005</sub> push the vehicle far from its original path. This seems to-->
+    <!--                    confuse-->
+    <!--                    NPC<sub>10005</sub>'s controller and later it drivers towards the stopped Apollo and the-->
+    <!--                    collision-->
+    <!--                    occurs (<i class="ts" data-target="obstacle-failure-video" data-value="8.5">8s</i>). Although-->
+    <!--                    Apollo-->
+    <!--                    is involved in the collision, we don't not hold Apollo responsible for this.-->
+    <!--                </p>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </section>-->
+
+</div>
+
+
+<script src="libs/bootstrap-4.5.3-dist/js/http_code.jquery.com_jquery-3.5.1.slim.js"></script>
+<script src="libs/bootstrap-4.5.3-dist/js/http_cdn.jsdelivr.net_npm_popper.js@1.16.1_dist_umd_popper.js"></script>
+<script src="libs/bootstrap-4.5.3-dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="static/js/index.js"></script>
+</body>
+
+</html>

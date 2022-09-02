@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Perception Error Modeling Framework</title>
+    <link rel="stylesheet" href="libs/bootstrap-5.2.0-dist/css/bootstrap.min.css">
+    <link rel="stylesheet"
+          href="libs/highlight.js/styles/dark.min.css">
+    <link rel="stylesheet" type="text/css" href="static/css/main.css">
+</head>
+
+<body>
+
+<div class="container">
+    <div class="jumbotron jumbotron-fluid text-center image-title">
+        <div class="title-background"></div>
+        <div class="title-background-overlay"></div>
+        <div class="container title-content">
+            <h1 class="display-1">Perception Error Modeling</h1>
+            <p class="lead">A Perception Error Modeling Framework for Autonomous Driving System Testing</p>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row my-4">
+        <h2 class="text-center">Perception Error Demos</h2>
+        <p>This section presents the video demonstrations of the basic errors applied to a single obstacle scenario.</p>
+        <ul style="padding-left: 2rem;">
+            <li>For each test case, its corresponding scenario configuration (including the perception error
+                information) is
+                presented on the right side in JSON format.
+            </li>
+            <li>The perception error information is at "SCENARIO" -> "ego_vehicle" -> "perception_errors".</li>
+            <li>The actual perception data sent to the "Plan" part of Apollo is highlighted in light green, while the
+                ground
+                truth perception is as shown in dark red, which is only for visualization purpose and invisible to the
+                "Plan" part.
+            </li>
+        </ul>
+    </div>
+    <div class="row mb-3">
+        <h4>Hardware: Detection Range Error</h4>
+        <p>The simulates the scenario where the detection range changes during the test case. Obstacles are filtered out
+            if they are out-of-range.</p>
+        <div class="col-7">
+            <video width="100%" controls>
+                <source src="static/error_configs/single_error_hardware_detection_range_error.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="col" style="max-height: 26.3rem; overflow-y: auto">
+            <pre><code class="error-configs language-json"
+                       data-config-path="static/error_configs/single_error_hardware_detection_range_error.json">
+                </code></pre>
+        </div>
+    </div>
+    <div class="row mb-3">
+        <h4>Hardware: Sensor Alignment Error</h4>
+        <p>The simulates the scenario where the sensor (say LiDAR) becomes misaligned. It by default affects all the
+            obstacles' position and orientation.</p>
+        <div class="col-7">
+            <video width="100%" controls>
+                <source src="static/error_configs/single_error_hardware_sensor_alignment_error.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="col" style="max-height: 26.3rem; overflow-y: auto">
+            <pre><code class="error-configs language-json"
+                       data-config-path="static/error_configs/single_error_hardware_sensor_alignment_error.json">
+                </code></pre>
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <h4>Software: Position x Uniform Random Error</h4>
+        <p>The simulates the scenario where there is a random error added to the position's x-axis the selected
+            obstacle.</p>
+        <div class="col-7">
+            <video width="100%" controls>
+                <source src="static/error_configs/single_error_software_position_x_uniform_random.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="col" style="max-height: 26.3rem; overflow-y: auto">
+            <pre><code class="error-configs language-json"
+                       data-config-path="static/error_configs/single_error_software_position_x_uniform_random.json">
+                </code></pre>
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <h4>Software: Position y Gaussian Error</h4>
+        <p>The simulates the scenario where there is a gaussian error added to the position's y-axis the selected
+            obstacle.</p>
+        <div class="col-7">
+            <video width="100%" controls>
+                <source src="static/error_configs/single_error_software_position_y_gaussian.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="col" style="max-height: 26.3rem; overflow-y: auto">
+            <pre><code class="error-configs language-json"
+                       data-config-path="static/error_configs/single_error_software_position_y_gaussian.json">
+                </code></pre>
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <h4>Software: Theta Uniform Random Error</h4>
+        <p>The simulates the scenario where there is a random error added to the obstacle's rotation.</p>
+        <div class="col-7">
+            <video width="100%" controls>
+                <source src="static/error_configs/single_error_software_theta_uniform_random.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="col" style="max-height: 26.3rem; overflow-y: auto">
+            <pre><code class="error-configs language-json"
+                       data-config-path="static/error_configs/single_error_software_theta_uniform_random.json">
+                </code></pre>
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <h4>Software: Dimension Length Uniform Random Error</h4>
+        <p>The simulates the scenario where there is a random error added to the obstacle's length dimension.</p>
+        <div class="col-7">
+            <video width="100%" controls>
+                <source src="static/error_configs/single_error_software_dimension_length_uniform_random.mp4"
+                        type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="col" style="max-height: 26.3rem; overflow-y: auto">
+            <pre><code class="error-configs language-json"
+                       data-config-path="static/error_configs/single_error_software_dimension_length_uniform_random.json">
+                </code></pre>
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <h4>Software: Dimension Width Uniform Random Error</h4>
+        <p>The simulates the scenario where there is a random error added to the obstacle's width dimension.</p>
+        <div class="col-7">
+            <video width="100%" controls>
+                <source src="static/error_configs/single_error_software_dimension_width_uniform_random.mp4"
+                        type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="col" style="max-height: 26.3rem; overflow-y: auto">
+            <pre><code class="error-configs language-json"
+                       data-config-path="static/error_configs/single_error_software_dimension_width_uniform_random.json">
+                </code></pre>
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <h4>Software: Velocity Uniform Random Error</h4>
+        <p>The simulates the scenario where there is a random error added to the obstacle's velocity (speed).</p>
+        <div class="col-7">
+            <video width="100%" controls>
+                <source src="static/error_configs/single_error_software_velocity_uniform_random.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="col" style="max-height: 26.3rem; overflow-y: auto">
+            <pre><code class="error-configs language-json"
+                       data-config-path="static/error_configs/single_error_software_velocity_uniform_random.json">
+                </code></pre>
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <h4>Software: ID Math Operation Error</h4>
+        <p>The simulates the scenario where the ID of the obstacle is changed due to tracking inconsistency.</p>
+        <div class="col-7">
+            <video width="100%" controls>
+                <source src="static/error_configs/single_error_software_id_math_operation.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="col" style="max-height: 26.3rem; overflow-y: auto">
+            <pre><code class="error-configs language-json"
+                       data-config-path="static/error_configs/single_error_software_id_math_operation.json">
+                </code></pre>
+        </div>
+    </div>
+</div>
+
+<script src="libs/bootstrap-5.2.0-dist/js/bootstrap.bundle.min.js"></script>
+<script src="libs/highlight.js/highlight.min.js"></script>
+
+<script src="static/js/index.js"></script>
+</body>
+
+</html>
