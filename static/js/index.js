@@ -1,12 +1,5 @@
-let interchangeClassSelect,
-    interchangeSampleSelect,
-    interchangeSampleImage,
-    buttonDownloadGraphML,
-    buttonDownloadNetXML,
-    buttonDownloadPDF,
-    buttonDownloadPNG,
-    buttonDownloadXodr,
-    buttonDownloadRouXMl,
+let interchangeClassSelect, interchangeSampleSelect, interchangeSampleImage, buttonDownloadGraphML,
+    buttonDownloadNetXML, buttonDownloadPDF, buttonDownloadPNG, buttonDownloadXodr, buttonDownloadRouXMl,
     buttonDownloadSumoCgf;
 
 document.addEventListener("DOMContentLoaded", async () => {
@@ -98,7 +91,7 @@ function onInterchangeSampleSelect(classIndex, sampleIndex) {
 
     interchangeSampleImage.innerHTML = null;
 
-    const baseURL = `/static/maps/${classIndex}/${sampleID}/${sampleID}`;
+    const baseURL = `/highway-interchange-dataset-website/static/maps/${classIndex}/${sampleID}/${sampleID}`;
 
     const img = document.createElement("img");
     img.src = `${baseURL}.png`;
