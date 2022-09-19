@@ -1,0 +1,86 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd"><key id="d11" for="edge" attr.name="part" attr.type="float"/>
+<key id="d10" for="edge" attr.name="junc" attr.type="string"/>
+<key id="d9" for="edge" attr.name="ramp" attr.type="string"/>
+<key id="d8" for="node" attr.name="radius" attr.type="float"/>
+<key id="d7" for="node" attr.name="geo" attr.type="string"/>
+<key id="d6" for="node" attr.name="curv" attr.type="int"/>
+<key id="d5" for="node" attr.name="ctrl" attr.type="string"/>
+<key id="d4" for="node" attr.name="is_generated" attr.type="boolean"/>
+<key id="d3" for="node" attr.name="lane" attr.type="long"/>
+<key id="d2" for="node" attr.name="curv" attr.type="string"/>
+<key id="d1" for="node" attr.name="type" attr.type="string"/>
+<key id="d0" for="node" attr.name="name" attr.type="string"/>
+<graph edgedefault="directed"><node id="A1">
+  <data key="d0">A1</data>
+  <data key="d1">main</data>
+  <data key="d2">inf</data>
+  <data key="d3">3</data>
+  <data key="d4">True</data>
+  <data key="d5">1101.1763433953502,101.61747216860638_1015.6660307335837,153.46326687258363_662.1730729821583,348.2244207541528_500.4258561215206,465.8587602891621_338.67863926088296,583.4930998241714_76.51506766107275,835.8597606359397_1.1763433953500926,901.6174721686064</data>
+</node>
+<node id="A2">
+  <data key="d0">A2</data>
+  <data key="d1">main</data>
+  <data key="d2">inf</data>
+  <data key="d3">3</data>
+  <data key="d4">True</data>
+  <data key="d5">-1.1763433953500926,898.3825278313936_74.16238087037257,832.624816298727_336.32595247018276,580.2581554869587_498.0731693308204,462.6238159519494_659.820386191458,344.9894764169401_1013.3133439428834,150.22832253537086_1098.8236566046498,98.38252783139362</data>
+</node>
+<node id="B1">
+  <data key="d0">B1</data>
+  <data key="d1">main</data>
+  <data key="d2">inf</data>
+  <data key="d3">3</data>
+  <data key="d4">True</data>
+  <data key="d5">1.5558823604074432,-101.25667421417525_70.34875862200558,-28.678852700599563_387.61099530966715,283.03230933561133_513.2784167271914,438.62054537635566_638.9458381447156,594.2087814171_993.7643606103081,1117.1336449029307_1051.5558823604074,1198.7433257858247</data>
+</node>
+<node id="B2">
+  <data key="d0">B2</data>
+  <data key="d1">main</data>
+  <data key="d2">inf</data>
+  <data key="d3">3</data>
+  <data key="d4">True</data>
+  <data key="d5">1048.4441176395926,1201.2566742141753_990.6525958894933,1119.6469933312812_635.8340734239008,596.7221298454505_510.1666520063765,441.13389380470613_384.49923058885224,285.5456577639618_67.23699390119071,-26.165504272249095_-1.5558823604074432,-98.74332578582475</data>
+</node>
+<node id="a">
+  <data key="d0">a</data>
+  <data key="d1">link</data>
+  <data key="d6">-6</data>
+  <data key="d3">1</data>
+  <data key="d7">direct</data>
+  <data key="d4">True</data>
+  <data key="d8">-245.0</data>
+  <data key="d5">257.2268013111385,159.31149352643786_313.2622697338831,217.11595395614614_467.37694271444815,268.69735549573824_559.3227410666167,267.1580996526496_689.7062525829297,264.97536171855484_777.4119188802521,283.75206157766763_1016.0295382325309,146.60844926024612</data>
+</node>
+<node id="b">
+  <data key="d0">b</data>
+  <data key="d1">link</data>
+  <data key="d6">7</data>
+  <data key="d3">1</data>
+  <data key="d7">circle_big</data>
+  <data key="d4">True</data>
+  <data key="d8">320.0</data>
+  <data key="d5">982.995407833441,170.16868487414152_898.439437675722,218.7328182689188_764.6071566013052,547.9310971054282_452.7950737208051,484.7824349928044_127.83974200760889,418.97198193247004_166.85062747569137,72.34541686812071_83.46661872586434,-12.005267588444028</data>
+</node>
+<edge source="A1" target="b">
+  <data key="d9">out</data>
+  <data key="d10">right</data>
+  <data key="d11">0.138377658539084</data>
+</edge>
+<edge source="B1" target="a">
+  <data key="d9">out</data>
+  <data key="d10">right</data>
+  <data key="d11">0.23707063653823957</data>
+</edge>
+<edge source="a" target="A2">
+  <data key="d9">in</data>
+  <data key="d10">right</data>
+  <data key="d11">0.8941405671308605</data>
+</edge>
+<edge source="b" target="B2">
+  <data key="d9">in</data>
+  <data key="d10">right</data>
+  <data key="d11">0.8946656518692094</data>
+</edge>
+</graph></graphml>

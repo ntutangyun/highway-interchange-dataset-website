@@ -1,0 +1,797 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--generated on 2022-09-02 14:48:06 by map_generator.py-->
+<OpenDRIVE>
+    <header date="2022-09-02T14:48:06" east="1.1011763433953502e+03" north="1.2012566742141753e+03" revMajor="1" revMinor="4" south="-1.0125667421417525e+02" west="-1.5558823604074432e+00"/>
+    <road id="0" junction="-1" length="2.0051568110360006e+02" name="A1_0">
+        <link>
+            <successor elementId="0" elementType="junction"/>
+        </link>
+        <planView>
+            <geometry hdg="2.6046957604067176e+00" length="2.0051568110360006e+02" s="0.0000000000000000e+00" x="1.1011763433953502e+03" y="1.0161747216860638e+02">
+                <paramPoly3 aU="0.0000000000000000e+00" aV="0.0000000000000000e+00" bU="1.2889155646854161e+02" bV="0.0000000000000000e+00" cU="8.9227989753337511e+01" cV="1.0163863959366434e+01" dU="-1.7693453389747180e+01" dV="-4.3667874848574852e+00" pRange="normalized"/>
+            </geometry>
+        </planView>
+        <elevationProfile>
+            <elevation a="0.0000000000000000e+00" b="0.0000000000000000e+00" c="0.0000000000000000e+00" d="0.0000000000000000e+00" s="0.0000000000000000e+00"/>
+        </elevationProfile>
+        <lanes>
+            <laneSection s="0.0000000000000000e+00">
+                <center>
+                    <lane id="0" type="none"/>
+                </center>
+                <right>
+                    <lane id="-1" type="driving">
+                        <link/>
+                        <width a="3.7500000000000000e+00" b="0.0000000000000000e+00" c="0.0000000000000000e+00" d="0.0000000000000000e+00" sOffset="0.0000000000000000e+00"/>
+                        <speed max="8.0000000000000000e+01" sOffset="0.0000000000000000e+00" unit="km/h"/>
+                    </lane>
+                    <lane id="-2" type="driving">
+                        <link/>
+                        <width a="3.7500000000000000e+00" b="0.0000000000000000e+00" c="0.0000000000000000e+00" d="0.0000000000000000e+00" sOffset="0.0000000000000000e+00"/>
+                        <speed max="8.0000000000000000e+01" sOffset="0.0000000000000000e+00" unit="km/h"/>
+                    </lane>
+                    <lane id="-3" type="driving">
+                        <link/>
+                        <width a="3.7500000000000000e+00" b="0.0000000000000000e+00" c="0.0000000000000000e+00" d="0.0000000000000000e+00" sOffset="0.0000000000000000e+00"/>
+                        <speed max="8.0000000000000000e+01" sOffset="0.0000000000000000e+00" unit="km/h"/>
+                    </lane>
+                    <lane id="-4" type="shoulder">
+                        <link/>
+                        <width a="3.5000000000000000e+00" b="0.0000000000000000e+00" c="0.0000000000000000e+00" d="0.0000000000000000e+00" sOffset="0.0000000000000000e+00"/>
+                        <speed max="8.0000000000000000e+01" sOffset="0.0000000000000000e+00" unit="km/h"/>
+                    </lane>
+                </right>
+            </laneSection>
+        </lanes>
+    </road>
+    <road id="1" junction="-1" length="3.6011226324172355e+02" name="A1_1">
+        <link>
+            <predecessor elementId="0" elementType="junction"/>
+            <successor elementId="2" elementType="road"/>
+        </link>
+        <planView>
+            <geometry hdg="2.6331124050520072e+00" length="3.6011226324172355e+02" s="0.0000000000000000e+00" x="9.2598516614757034e+02" y="1.9914837085278043e+02">
+                <paramPoly3 aU="0.0000000000000000e+00" aV="0.0000000000000000e+00" bU="3.3768567917433870e+02" bV="0.0000000000000000e+00" cU="6.3532276217789956e+01" cV="-6.9831097748045963e+00" dU="-4.1669105020021178e+01" dV="-9.0362310173399614e+00" pRange="normalized"/>
+            </geometry>
+        </planView>
+        <elevationProfile>
+            <elevation a="0.0000000000000000e+00" b="0.0000000000000000e+00" c="0.0000000000000000e+00" d="0.0000000000000000e+00" s="0.0000000000000000e+00"/>
+        </elevationProfile>
+        <lanes>
+            <laneSection s="0.0000000000000000e+00">
+                <center>
+                    <lane id="0" type="none"/>
+                </center>
+                <right>
+                    <lane id="-1" type="driving">
+                        <link>
+                            <predecessor id="-1"/>
+                            <successor id="-1"/>
+                        </link>
+                        <width a="3.7500000000000000e+00" b="0.0000000000000000e+00" c="0.0000000000000000e+00" d="0.0000000000000000e+00" sOffset="0.0000000000000000e+00"/>
+                        <speed max="8.0000000000000000e+01" sOffset="0.0000000000000000e+00" unit="km/h"/>
+                    </lane>
+                    <lane id="-2" type="driving">
+                        <link>
+                            <predecessor id="-2"/>
+                            <successor id="-2"/>
+                        </link>
+                        <width a="3.7500000000000000e+00" b="0.0000000000000000e+00" c="0.0000000000000000e+00" d="0.0000000000000000e+00" sOffset="0.0000000000000000e+00"/>
+                        <speed max="8.0000000000000000e+01" sOffset="0.0000000000000000e+00" unit="km/h"/>
+                    </lane>
+                    <lane id="-3" type="driving">
+                        <link>
+                            <predecessor id="-3"/>
+                            <successor id="-3"/>
+                        </link>
+                        <width a="3.7500000000000000e+00" b="0.0000000000000000e+00" c="0.0000000000000000e+00" d="0.0000000000000000e+00" sOffset="0.0000000000000000e+00"/>
+                        <speed max="8.0000000000000000e+01" sOffset="0.0000000000000000e+00" unit="km/h"/>
+                    </lane>
+                    <lane id="-4" type="shoulder">
+                        <link>
+                            <predecessor id="-4"/>
+                            <successor id="-4"/>
+                        </link>
+                        <width a="3.5000000000000000e+00" b="0.0000000000000000e+00" c="0.0000000000000000e+00" d="0.0000000000000000e+00" sOffset="0.0000000000000000e+00"/>
+                        <speed max="8.0000000000000000e+01" sOffset="0.0000000000000000e+00" unit="km/h"/>
+                    </lane>
+                </right>
+            </laneSection>
+        </lanes>
+    </road>
+    <road id="2" junction="-1" length="8.0400606245431368e+02" name="A1_2">
+        <link>
+            <predecessor elementId="1" elementType="road"/>
+        </link>
+        <planView>
+            <geometry hdg="2.5127963671743601e+00" length="8.0400606245431368e+02" s="0.0000000000000000e+00" x="6.1972351336856605e+02" y="3.8818750733089621e+02">
+                <paramPoly3 aU="0.0000000000000000e+00" aV="0.0000000000000000e+00" bU="6.0000000000000000e+02" bV="0.0000000000000000e+00" cU="9.0729347295923174e+02" cV="-1.3506355974408558e+02" dU="-7.0506708270243894e+02" dV="8.3646159472554189e+01" pRange="normalized"/>
+            </geometry>
+        </planView>
+        <elevationProfile>
+            <elevation a="0.0000000000000000e+00" b="0.0000000000000000e+00" c="0.0000000000000000e+00" d="0.0000000000000000e+00" s="0.0000000000000000e+00"/>
+        </elevationProfile>
+        <lanes>
+            <laneSection s="0.0000000000000000e+00">
+                <center>
+                    <lane id="0" type="none"/>
+                </center>
+                <right>
+                    <lane id="-1" type="driving">
+                        <link>
+                            <predecessor id="-1"/>
+                        </link>
+                        <width a="3.7500000000000000e+00" b="0.0000000000000000e+00" c="0.0000000000000000e+00" d="0.0000000000000000e+00" sOffset="0.0000000000000000e+00"/>
+                        <speed max="8.0000000000000000e+01" sOffset="0.0000000000000000e+00" unit="km/h"/>
+                    </lane>
+                    <lane id="-2" type="driving">
+                        <link>
+                            <predecessor id="-2"/>
+                        </link>
+                        <width a="3.7500000000000000e+00" b="0.0000000000000000e+00" c="0.0000000000000000e+00" d="0.0000000000000000e+00" sOffset="0.0000000000000000e+00"/>
+                        <speed max="8.0000000000000000e+01" sOffset="0.0000000000000000e+00" unit="km/h"/>
+                    </lane>
+                    <lane id="-3" type="driving">
+                        <link>
+                            <predecessor id="-3"/>
+                        </link>
+                        <width a="3.7500000000000000e+00" b="0.0000000000000000e+00" c="0.0000000000000000e+00" d="0.0000000000000000e+00" sOffset="0.0000000000000000e+00"/>
+                        <speed max="8.0000000000000000e+01" sOffset="0.0000000000000000e+00" unit="km/h"/>
+                    </lane>
+                    <lane id="-4" type="shoulder">
+                        <link>
+                            <predecessor id="-4"/>
+                        </link>
+                        <width a="3.5000000000000000e+00" b="0.0000000000000000e+00" c="0.0000000000000000e+00" d="0.0000000000000000e+00" sOffset="0.0000000000000000e+00"/>
+                        <speed max="8.0000000000000000e+01" sOffset="0.0000000000000000e+00" unit="km/h"/>
+                    </lane>
+                </right>
+            </laneSection>
+        </lanes>
+    </road>
+    <road id="3" junction="-1" length="8.0400606245431379e+02" name="A2_0">
+        <link>
+            <successor elementId="4" elementType="road"/>
+        </link>
+        <planView>
+            <geometry hdg="-6.9280211697481708e-01" length="8.0400606245431379e+02" s="0.0000000000000000e+00" x="-1.1763433953500926e+00" y="8.9838252783139365e+02">
+                <paramPoly3 aU="0.0000000000000000e+00" aV="0.0000000000000000e+00" bU="3.0000000000000000e+02" bV="0.0000000000000000e+00" cU="1.2128459812590690e+03" cV="-3.8377282141017645e+01" dU="-7.0897352229861508e+02" dV="3.8377282141017531e+01" pRange="normalized"/>
+            </geometry>
+        </planView>
+        <elevationProfile>
+            <elevation a="0.0000000000000000e+00" b="0.0000000000000000e+00" c="0.0000000000000000e+00" d="0.0000000000000000e+00" s="0.0000000000000000e+00"/>
+        </elevationProfile>
+        <lanes>
+            <laneSection s="0.0000000000000000e+00">
+                <center>
+                    <lane id="0" type="none"/>
+                </center>
+                <right>
+                    <lane id="-1" type="driving">
+                        <link>
+                            <successor id="-1"/>
+                        </link>
+                        <width a="3.7500000000000000e+00" b="0.0000000000000000e+00" c="0.0000000000000000e+00" d="0.0000000000000000e+00" sOffset="0.0000000000000000e+00"/>
+                        <speed max="8.0000000000000000e+01" sOffset="0.0000000000000000e+00" unit="km/h"/>
+                    </lane>
+                    <lane id="-2" type="driving">
+                        <link>
+                            <successor id="-2"/>
+                        </link>
+                        <width a="3.7500000000000000e+00" b="0.0000000000000000e+00" c="0.0000000000000000e+00" d="0.0000000000000000e+00" sOffset="0.0000000000000000e+00"/>
+                        <speed max="8.0000000000000000e+01" sOffset="0.0000000000000000e+00" unit="km/h"/>
+                    </lane>
+                    <lane id="-3" type="driving">
+                        <link>
+                            <successor id="-3"/>
+                        </link>
+                        <width a="3.7500000000000000e+00" b="0.0000000000000000e+00" c="0.0000000000000000e+00" d="0.0000000000000000e+00" sOffset="0.0000000000000000e+00"/>
+                        <speed max="8.0000000000000000e+01" sOffset="0.0000000000000000e+00" unit="km/h"/>
+                    </lane>
+                    <lane id="-4" type="shoulder">
+                        <link>
+                            <successor id="-4"/>
+                        </link>
+                        <width a="3.5000000000000000e+00" b="0.0000000000000000e+00" c="0.0000000000000000e+00" d="0.0000000000000000e+00" sOffset="0.0000000000000000e+00"/>
+                        <speed max="8.0000000000000000e+01" sOffset="0.0000000000000000e+00" unit="km/h"/>
+                    </lane>
+                </right>
+            </laneSection>
+        </lanes>
+    </road>
+    <road id="4" junction="-1" length="4.5570894927587540e+02" name="A2_1">
+        <link>
+            <predecessor elementId="3" elementType="road"/>
+            <successor elementId="2" elementType="junction"/>
+        </link>
+        <planView>
+            <geometry hdg="-6.2879628641543339e-01" length="4.5570894927587540e+02" s="0.0000000000000000e+00" x="6.1737082657786596e+02" y="3.8495256299368350e+02">
+                <paramPoly3 aU="0.0000000000000000e+00" aV="0.0000000000000000e+00" bU="4.4622861371143892e+02" bV="0.0000000000000000e+00" cU="9.6809872885792359e+01" cV="7.0090880393350460e+01" dU="-8.9308507261384904e+01" dV="-3.0976705811731257e+01" pRange="normalized"/>
+            </geometry>
+        </planView>
+        <elevationProfile>
+            <elevation a="0.0000000000000000e+00" b="0.0000000000000000e+00" c="0.0000000000000000e+00" d="0.0000000000000000e+00" s="0.0000000000000000e+00"/>
+        </elevationProfile>
+        <lanes>
+            <laneSection s="0.0000000000000000e+00">
+                <center>
+                    <lane id="0" type="none"/>
+                </center>
+                <right>
+                    <lane id="-1" type="driving">
+                        <link>
+                            <predecessor id="-1"/>
+                            <successor id="-1"/>
+                        </link>
+                        <width a="3.7500000000000000e+00" b="0.0000000000000000e+00" c="0.0000000000000000e+00" d="0.0000000000000000e+00" sOffset="0.0000000000000000e+00"/>
+                        <speed max="8.0000000000000000e+01" sOffset="0.0000000000000000e+00" unit="km/h"/>
+                    </lane>
+                    <lane id="-2" type="driving">
+                        <link>
+                            <predecessor id="-2"/>
+                            <successor id="-2"/>
+                        </link>
+                        <width a="3.7500000000000000e+00" b="0.0000000000000000e+00" c="0.0000000000000000e+00" d="0.0000000000000000e+00" sOffset="0.0000000000000000e+00"/>
+                        <speed max="8.0000000000000000e+01" sOffset="0.0000000000000000e+00" unit="km/h"/>
+                    </lane>
+                    <lane id="-3" type="driving">
+                        <link>
+                            <predecessor id="-3"/>
+                            <successor id="-3"/>
+                        </link>
+                        <width a="3.7500000000000000e+00" b="0.0000000000000000e+00" c="0.0000000000000000e+00" d="0.0000000000000000e+00" sOffset="0.0000000000000000e+00"/>
+                        <speed max="8.0000000000000000e+01" sOffset="0.0000000000000000e+00" unit="km/h"/>
+                    </lane>
+                    <lane id="-4" type="shoulder">
+                        <link>
+                            <predecessor id="-4"/>
+                            <successor id="-4"/>
+                        </link>
+                        <width a="3.5000000000000000e+00" b="0.0000000000000000e+00" c="0.0000000000000000e+00" d="0.0000000000000000e+00" sOffset="0.0000000000000000e+00"/>
+                        <speed max="8.0000000000000000e+01" sOffset="0.0000000000000000e+00" unit="km/h"/>
+                    </lane>
+                </right>
+            </laneSection>
+        </lanes>
+    </road>
+    <road id="5" junction="-1" length="1.0491899506944807e+02" name="A2_2">
+        <link>
+            <predecessor elementId="2" elementType="junction"/>
+        </link>
+        <planView>
+            <geometry hdg="-5.0242639354611018e-01" length="1.0491899506944807e+02" s="0.0000000000000000e+00" x="1.0073244838637343e+03" y="1.4971447515354498e+02">
+                <paramPoly3 aU="0.0000000000000000e+00" aV="0.0000000000000000e+00" bU="1.2919566163181540e+02" bV="0.0000000000000000e+00" cU="-2.0499897677687191e+01" cV="-1.2952814143377900e-01" dU="-3.7852823298569991e+00" dV="-7.9690238457831253e-01" pRange="normalized"/>
+            </geometry>
+        </planView>
+        <elevationProfile>
+            <elevation a="0.0000000000000000e+00" b="0.0000000000000000e+00" c="0.0000000000000000e+00" d="0.0000000000000000e+00" s="0.0000000000000000e+00"/>
+        </elevationProfile>
+        <lanes>
+            <laneSection s="0.0000000000000000e+00">
+                <center>
+                    <lane id="0" type="none"/>
+                </center>
+                <right>
+                    <lane id="-1" type="driving">
+                        <link/>
+                        <width a="3.7500000000000000e+00" b="0.0000000000000000e+00" c="0.0000000000000000e+00" d="0.0000000000000000e+00" sOffset="0.0000000000000000e+00"/>
+                        <speed max="8.0000000000000000e+01" sOffset="0.0000000000000000e+00" unit="km/h"/>
+                    </lane>
+                    <lane id="-2" type="driving">
+                        <link/>
+                        <width a="3.7500000000000000e+00" b="0.0000000000000000e+00" c="0.0000000000000000e+00" d="0.0000000000000000e+00" sOffset="0.0000000000000000e+00"/>
+                        <speed max="8.0000000000000000e+01" sOffset="0.0000000000000000e+00" unit="km/h"/>
+                    </lane>
+                    <lane id="-3" type="driving">
+                        <link/>
+                        <width a="3.7500000000000000e+00" b="0.0000000000000000e+00" c="0.0000000000000000e+00" d="0.0000000000000000e+00" sOffset="0.0000000000000000e+00"/>
+                        <speed max="8.0000000000000000e+01" sOffset="0.0000000000000000e+00" unit="km/h"/>
+                    </lane>
+                    <lane id="-4" type="shoulder">
+                        <link/>
+                        <width a="3.5000000000000000e+00" b="0.0000000000000000e+00" c="0.0000000000000000e+00" d="0.0000000000000000e+00" sOffset="0.0000000000000000e+00"/>
+                        <speed max="8.0000000000000000e+01" sOffset="0.0000000000000000e+00" unit="km/h"/>
+                    </lane>
+                </right>
+            </laneSection>
+        </lanes>
+    </road>
+    <road id="6" junction="-1" length="2.2297375060385525e+02" name="B1_0">
+        <link>
+            <successor elementId="1" elementType="junction"/>
+        </link>
+        <planView>
+            <geometry hdg="9.6069381082961081e-01" length="2.2297375060385525e+02" s="0.0000000000000000e+00" x="1.5558823604074432e+00" y="-1.0125667421417525e+02">
+                <paramPoly3 aU="0.0000000000000000e+00" aV="0.0000000000000000e+00" bU="1.1270934541150589e+02" bV="0.0000000000000000e+00" cU="1.4002729695824229e+02" cV="5.8652265196360815e+00" dU="-2.9794500484288676e+01" dV="-2.2035528057279556e+00" pRange="normalized"/>
+            </geometry>
+        </planView>
+        <elevationProfile>
+            <elevation a="2.0000000000000000e+01" b="0.0000000000000000e+00" c="0.0000000000000000e+00" d="0.0000000000000000e+00" s="0.0000000000000000e+00"/>
+        </elevationProfile>
+        <lanes>
+            <laneSection s="0.0000000000000000e+00">
+                <center>
+                    <lane id="0" type="none"/>
+                </center>
+                <right>
+                    <lane id="-1" type="driving">
+                        <link/>
+                        <width a="3.7500000000000000e+00" b="0.0000000000000000e+00" c="0.0000000000000000e+00" d="0.0000000000000000e+00" sOffset="0.0000000000000000e+00"/>
+                        <speed max="8.0000000000000000e+01" sOffset="0.0000000000000000e+00" unit="km/h"/>
+                    </lane>
+                    <lane id="-2" type="driving">
+                        <link/>
+                        <width a="3.7500000000000000e+00" b="0.0000000000000000e+00" c="0.0000000000000000e+00" d="0.0000000000000000e+00" sOffset="0.0000000000000000e+00"/>
+                        <speed max="8.0000000000000000e+01" sOffset="0.0000000000000000e+00" unit="km/h"/>
+                    </lane>
+                    <lane id="-3" type="driving">
+                        <link/>
+                        <width a="3.7500000000000000e+00" b="0.0000000000000000e+00" c="0.0000000000000000e+00" d="0.0000000000000000e+00" sOffset="0.0000000000000000e+00"/>
+                        <speed max="8.0000000000000000e+01" sOffset="0.0000000000000000e+00" unit="km/h"/>
+                    </lane>
+                    <lane id="-4" type="shoulder">
+                        <link/>
+                        <width a="3.5000000000000000e+00" b="0.0000000000000000e+00" c="0.0000000000000000e+00" d="0.0000000000000000e+00" sOffset="0.0000000000000000e+00"/>
+                        <speed max="8.0000000000000000e+01" sOffset="0.0000000000000000e+00" unit="km/h"/>
+                    </lane>
+                </right>
+            </laneSection>
+        </lanes>
+    </road>
+    <road id="7" junction="-1" length="5.0739655101778152e+02" name="B1_1">
+        <link>
+            <predecessor elementId="1" elementType="junction"/>
+            <successor elementId="8" elementType="road"/>
+        </link>
+        <planView>
+            <geometry hdg="9.7756803222983901e-01" length="5.0739655101778152e+02" s="0.0000000000000000e+00" x="1.2628984487878787e+02" y="8.3562277945300963e+01">
+                <paramPoly3 aU="0.0000000000000000e+00" aV="0.0000000000000000e+00" bU="5.0420318778268035e+02" bV="0.0000000000000000e+00" cU="1.3978767522047599e+02" cV="-4.4176804256419189e+00" dU="-1.3686251743174796e+02" dV="-7.8027229445534729e+00" pRange="normalized"/>
+            </geometry>
+        </planView>
+        <elevationProfile>
+            <elevation a="2.0000000000000000e+01" b="0.0000000000000000e+00" c="0.0000000000000000e+00" d="0.0000000000000000e+00" s="0.0000000000000000e+00"/>
+        </elevationProfile>
+        <lanes>
+            <laneSection s="0.0000000000000000e+00">
+                <center>
+                    <lane id="0" type="none"/>
+                </center>
+                <right>
+                    <lane id="-1" type="driving">
+                        <link>
+                            <predecessor id="-1"/>
+                            <successor id="-1"/>
+                        </link>
+                        <width a="3.7500000000000000e+00" b="0.0000000000000000e+00" c="0.0000000000000000e+00" d="0.0000000000000000e+00" sOffset="0.0000000000000000e+00"/>
+                        <speed max="8.0000000000000000e+01" sOffset="0.0000000000000000e+00" unit="km/h"/>
+                    </lane>
+                    <lane id="-2" type="driving">
+                        <link>
+                            <predecessor id="-2"/>
+                            <successor id="-2"/>
+                        </link>
+                        <width a="3.7500000000000000e+00" b="0.0000000000000000e+00" c="0.0000000000000000e+00" d="0.0000000000000000e+00" sOffset="0.0000000000000000e+00"/>
+                        <speed max="8.0000000000000000e+01" sOffset="0.0000000000000000e+00" unit="km/h"/>
+                    </lane>
+                    <lane id="-3" type="driving">
+                        <link>
+                            <predecessor id="-3"/>
+                            <successor id="-3"/>
+                        </link>
+                        <width a="3.7500000000000000e+00" b="0.0000000000000000e+00" c="0.0000000000000000e+00" d="0.0000000000000000e+00" sOffset="0.0000000000000000e+00"/>
+                        <speed max="8.0000000000000000e+01" sOffset="0.0000000000000000e+00" unit="km/h"/>
+                    </lane>
+                    <lane id="-4" type="shoulder">
+                        <link>
+                            <predecessor id="-4"/>
+                            <successor id="-4"/>
+                        </link>
+                        <width a="3.5000000000000000e+00" b="0.0000000000000000e+00" c="0.0000000000000000e+00" d="0.0000000000000000e+00" sOffset="0.0000000000000000e+00"/>
+                        <speed max="8.0000000000000000e+01" sOffset="0.0000000000000000e+00" unit="km/h"/>
+                    </lane>
+                </right>
+            </laneSection>
+        </lanes>
+    </road>
+    <road id="8" junction="-1" length="9.4406720482222340e+02" name="B1_2">
+        <link>
+            <predecessor elementId="7" elementType="road"/>
+        </link>
+        <planView>
+            <geometry hdg="8.9138252138704843e-01" length="9.4406720482222340e+02" s="0.0000000000000000e+00" x="4.1992762830228946e+02" y="4.9721110157067625e+02">
+                <paramPoly3 aU="0.0000000000000000e+00" aV="0.0000000000000000e+00" bU="6.0000000000000000e+02" bV="0.0000000000000000e+00" cU="1.3283096306940022e+03" cV="-1.3564113322530739e+02" dU="-9.8568335432744493e+02" dV="8.5070232105409673e+01" pRange="normalized"/>
+            </geometry>
+        </planView>
+        <elevationProfile>
+            <elevation a="2.0000000000000000e+01" b="0.0000000000000000e+00" c="0.0000000000000000e+00" d="0.0000000000000000e+00" s="0.0000000000000000e+00"/>
+        </elevationProfile>
+        <lanes>
+            <laneSection s="0.0000000000000000e+00">
+                <center>
+                    <lane id="0" type="none"/>
+                </center>
+                <right>
+                    <lane id="-1" type="driving">
+                        <link>
+                            <predecessor id="-1"/>
+                        </link>
+                        <width a="3.7500000000000000e+00" b="0.0000000000000000e+00" c="0.0000000000000000e+00" d="0.0000000000000000e+00" sOffset="0.0000000000000000e+00"/>
+                        <speed max="8.0000000000000000e+01" sOffset="0.0000000000000000e+00" unit="km/h"/>
+                    </lane>
+                    <lane id="-2" type="driving">
+                        <link>
+                            <predecessor id="-2"/>
+                        </link>
+                        <width a="3.7500000000000000e+00" b="0.0000000000000000e+00" c="0.0000000000000000e+00" d="0.0000000000000000e+00" sOffset="0.0000000000000000e+00"/>
+                        <speed max="8.0000000000000000e+01" sOffset="0.0000000000000000e+00" unit="km/h"/>
+                    </lane>
+                    <lane id="-3" type="driving">
+                        <link>
+                            <predecessor id="-3"/>
+                        </link>
+                        <width a="3.7500000000000000e+00" b="0.0000000000000000e+00" c="0.0000000000000000e+00" d="0.0000000000000000e+00" sOffset="0.0000000000000000e+00"/>
+                        <speed max="8.0000000000000000e+01" sOffset="0.0000000000000000e+00" unit="km/h"/>
+                    </lane>
+                    <lane id="-4" type="shoulder">
+                        <link>
+                            <predecessor id="-4"/>
+                        </link>
+                        <width a="3.5000000000000000e+00" b="0.0000000000000000e+00" c="0.0000000000000000e+00" d="0.0000000000000000e+00" sOffset="0.0000000000000000e+00"/>
+                        <speed max="8.0000000000000000e+01" sOffset="0.0000000000000000e+00" unit="km/h"/>
+                    </lane>
+                </right>
+            </laneSection>
+        </lanes>
+    </road>
+    <road id="9" junction="-1" length="9.4406720482222363e+02" name="B2_0">
+        <link>
+            <successor elementId="10" elementType="road"/>
+        </link>
+        <planView>
+            <geometry hdg="-2.3038076905671794e+00" length="9.4406720482222363e+02" s="0.0000000000000000e+00" x="1.0484441176395926e+03" y="1.2012566742141753e+03">
+                <paramPoly3 aU="0.0000000000000000e+00" aV="0.0000000000000000e+00" bU="3.0000000000000000e+02" bV="0.0000000000000000e+00" cU="1.6328071211022448e+03" cV="-3.2143140268773891e+01" dU="-9.8882528179771680e+02" dV="3.2143140268772925e+01" pRange="normalized"/>
+            </geometry>
+        </planView>
+        <elevationProfile>
+            <elevation a="2.0000000000000000e+01" b="0.0000000000000000e+00" c="0.0000000000000000e+00" d="0.0000000000000000e+00" s="0.0000000000000000e+00"/>
+        </elevationProfile>
+        <lanes>
+            <laneSection s="0.0000000000000000e+00">
+                <center>
+                    <lane id="0" type="none"/>
+                </center>
+                <right>
+                    <lane id="-1" type="driving">
+                        <link>
+                            <successor id="-1"/>
+                        </link>
+                        <width a="3.7500000000000000e+00" b="0.0000000000000000e+00" c="0.0000000000000000e+00" d="0.0000000000000000e+00" sOffset="0.0000000000000000e+00"/>
+                        <speed max="8.0000000000000000e+01" sOffset="0.0000000000000000e+00" unit="km/h"/>
+                    </lane>
+                    <lane id="-2" type="driving">
+                        <link>
+                            <successor id="-2"/>
+                        </link>
+                        <width a="3.7500000000000000e+00" b="0.0000000000000000e+00" c="0.0000000000000000e+00" d="0.0000000000000000e+00" sOffset="0.0000000000000000e+00"/>
+                        <speed max="8.0000000000000000e+01" sOffset="0.0000000000000000e+00" unit="km/h"/>
+                    </lane>
+                    <lane id="-3" type="driving">
+                        <link>
+                            <successor id="-3"/>
+                        </link>
+                        <width a="3.7500000000000000e+00" b="0.0000000000000000e+00" c="0.0000000000000000e+00" d="0.0000000000000000e+00" sOffset="0.0000000000000000e+00"/>
+                        <speed max="8.0000000000000000e+01" sOffset="0.0000000000000000e+00" unit="km/h"/>
+                    </lane>
+                    <lane id="-4" type="shoulder">
+                        <link>
+                            <successor id="-4"/>
+                        </link>
+                        <width a="3.5000000000000000e+00" b="0.0000000000000000e+00" c="0.0000000000000000e+00" d="0.0000000000000000e+00" sOffset="0.0000000000000000e+00"/>
+                        <speed max="8.0000000000000000e+01" sOffset="0.0000000000000000e+00" unit="km/h"/>
+                    </lane>
+                </right>
+            </laneSection>
+        </lanes>
+    </road>
+    <road id="10" junction="-1" length="5.5133184976384916e+02" name="B2_1">
+        <link>
+            <predecessor elementId="9" elementType="road"/>
+            <successor elementId="3" elementType="junction"/>
+        </link>
+        <planView>
+            <geometry hdg="-2.2502101322027448e+00" length="5.5133184976384916e+02" s="0.0000000000000000e+00" x="4.1681586358147456e+02" y="4.9972444999902672e+02">
+                <paramPoly3 aU="0.0000000000000000e+00" aV="0.0000000000000000e+00" bU="4.0812755241415499e+02" bV="0.0000000000000000e+00" cU="3.1743899662086721e+02" cV="6.0582650466692556e+01" dU="-1.7549893484505293e+02" dV="-2.5293053760621447e+01" pRange="normalized"/>
+            </geometry>
+        </planView>
+        <elevationProfile>
+            <elevation a="2.0000000000000000e+01" b="0.0000000000000000e+00" c="0.0000000000000000e+00" d="0.0000000000000000e+00" s="0.0000000000000000e+00"/>
+        </elevationProfile>
+        <lanes>
+            <laneSection s="0.0000000000000000e+00">
+                <center>
+                    <lane id="0" type="none"/>
+                </center>
+                <right>
+                    <lane id="-1" type="driving">
+                        <link>
+                            <predecessor id="-1"/>
+                            <successor id="-1"/>
+                        </link>
+                        <width a="3.7500000000000000e+00" b="0.0000000000000000e+00" c="0.0000000000000000e+00" d="0.0000000000000000e+00" sOffset="0.0000000000000000e+00"/>
+                        <speed max="8.0000000000000000e+01" sOffset="0.0000000000000000e+00" unit="km/h"/>
+                    </lane>
+                    <lane id="-2" type="driving">
+                        <link>
+                            <predecessor id="-2"/>
+                            <successor id="-2"/>
+                        </link>
+                        <width a="3.7500000000000000e+00" b="0.0000000000000000e+00" c="0.0000000000000000e+00" d="0.0000000000000000e+00" sOffset="0.0000000000000000e+00"/>
+                        <speed max="8.0000000000000000e+01" sOffset="0.0000000000000000e+00" unit="km/h"/>
+                    </lane>
+                    <lane id="-3" type="driving">
+                        <link>
+                            <predecessor id="-3"/>
+                            <successor id="-3"/>
+                        </link>
+                        <width a="3.7500000000000000e+00" b="0.0000000000000000e+00" c="0.0000000000000000e+00" d="0.0000000000000000e+00" sOffset="0.0000000000000000e+00"/>
+                        <speed max="8.0000000000000000e+01" sOffset="0.0000000000000000e+00" unit="km/h"/>
+                    </lane>
+                    <lane id="-4" type="shoulder">
+                        <link>
+                            <predecessor id="-4"/>
+                            <successor id="-4"/>
+                        </link>
+                        <width a="3.5000000000000000e+00" b="0.0000000000000000e+00" c="0.0000000000000000e+00" d="0.0000000000000000e+00" sOffset="0.0000000000000000e+00"/>
+                        <speed max="8.0000000000000000e+01" sOffset="0.0000000000000000e+00" unit="km/h"/>
+                    </lane>
+                </right>
+            </laneSection>
+        </lanes>
+    </road>
+    <road id="11" junction="-1" length="1.7903845185778758e+02" name="B2_2">
+        <link>
+            <predecessor elementId="3" elementType="junction"/>
+        </link>
+        <planView>
+            <geometry hdg="-2.1627563772576472e+00" length="1.7903845185778758e+02" s="0.0000000000000000e+00" x="9.8641200689193866e+01" y="4.9630437919655066e+01">
+                <paramPoly3 aU="0.0000000000000000e+00" aV="0.0000000000000000e+00" bU="2.4375710009551781e+02" bV="0.0000000000000000e+00" cU="-4.6324858898385344e+01" cV="6.6782382921681460e-01" dU="-1.8395648910479412e+01" dV="-1.0253572696265874e+00" pRange="normalized"/>
+            </geometry>
+        </planView>
+        <elevationProfile>
+            <elevation a="2.0000000000000000e+01" b="0.0000000000000000e+00" c="0.0000000000000000e+00" d="0.0000000000000000e+00" s="0.0000000000000000e+00"/>
+        </elevationProfile>
+        <lanes>
+            <laneSection s="0.0000000000000000e+00">
+                <center>
+                    <lane id="0" type="none"/>
+                </center>
+                <right>
+                    <lane id="-1" type="driving">
+                        <link/>
+                        <width a="3.7500000000000000e+00" b="0.0000000000000000e+00" c="0.0000000000000000e+00" d="0.0000000000000000e+00" sOffset="0.0000000000000000e+00"/>
+                        <speed max="8.0000000000000000e+01" sOffset="0.0000000000000000e+00" unit="km/h"/>
+                    </lane>
+                    <lane id="-2" type="driving">
+                        <link/>
+                        <width a="3.7500000000000000e+00" b="0.0000000000000000e+00" c="0.0000000000000000e+00" d="0.0000000000000000e+00" sOffset="0.0000000000000000e+00"/>
+                        <speed max="8.0000000000000000e+01" sOffset="0.0000000000000000e+00" unit="km/h"/>
+                    </lane>
+                    <lane id="-3" type="driving">
+                        <link/>
+                        <width a="3.7500000000000000e+00" b="0.0000000000000000e+00" c="0.0000000000000000e+00" d="0.0000000000000000e+00" sOffset="0.0000000000000000e+00"/>
+                        <speed max="8.0000000000000000e+01" sOffset="0.0000000000000000e+00" unit="km/h"/>
+                    </lane>
+                    <lane id="-4" type="shoulder">
+                        <link/>
+                        <width a="3.5000000000000000e+00" b="0.0000000000000000e+00" c="0.0000000000000000e+00" d="0.0000000000000000e+00" sOffset="0.0000000000000000e+00"/>
+                        <speed max="8.0000000000000000e+01" sOffset="0.0000000000000000e+00" unit="km/h"/>
+                    </lane>
+                </right>
+            </laneSection>
+        </lanes>
+    </road>
+    <road id="12" junction="-1" length="3.7473178630454584e+02" name="a_0">
+        <link>
+            <predecessor elementId="1" elementType="junction"/>
+            <successor elementId="13" elementType="road"/>
+        </link>
+        <planView>
+            <geometry hdg="9.7756803222983912e-01" length="3.7473178630454584e+02" s="0.0000000000000000e+00" x="1.3250839679108387e+02" y="7.9369473142537075e+01">
+                <paramPoly3 aU="0.0000000000000000e+00" aV="0.0000000000000000e+00" bU="2.1736922051215794e+02" bV="0.0000000000000000e+00" cU="4.2974071218499722e+02" cV="-3.0196473351211898e+02" dU="-3.1330276608747795e+02" dV="1.4347579936634929e+02" pRange="normalized"/>
+            </geometry>
+        </planView>
+        <elevationProfile>
+            <elevation a="2.0000000000000000e+01" b="1.2428296673532190e-17" c="-8.4587291967486546e-05" d="7.5242520169472327e-08" s="0.0000000000000000e+00"/>
+        </elevationProfile>
+        <lanes>
+            <laneSection s="0.0000000000000000e+00">
+                <center>
+                    <lane id="0" type="none"/>
+                </center>
+                <right>
+                    <lane id="-1" type="driving">
+                        <link>
+                            <predecessor id="-3"/>
+                            <successor id="-1"/>
+                        </link>
+                        <width a="3.7500000000000000e+00" b="0.0000000000000000e+00" c="0.0000000000000000e+00" d="0.0000000000000000e+00" sOffset="0.0000000000000000e+00"/>
+                        <speed max="4.0000000000000000e+01" sOffset="0.0000000000000000e+00" unit="km/h"/>
+                    </lane>
+                    <lane id="-2" type="shoulder">
+                        <link>
+                            <predecessor id="-4"/>
+                            <successor id="-2"/>
+                        </link>
+                        <width a="3.5000000000000000e+00" b="0.0000000000000000e+00" c="0.0000000000000000e+00" d="0.0000000000000000e+00" sOffset="0.0000000000000000e+00"/>
+                        <speed max="4.0000000000000000e+01" sOffset="0.0000000000000000e+00" unit="km/h"/>
+                    </lane>
+                </right>
+            </laneSection>
+        </lanes>
+    </road>
+    <road id="13" junction="-1" length="5.7171369047964640e+02" name="a_1">
+        <link>
+            <predecessor elementId="12" elementType="road"/>
+            <successor elementId="2" elementType="junction"/>
+        </link>
+        <planView>
+            <geometry hdg="7.4944045923477629e-02" length="5.7171369047964640e+02" s="0.0000000000000000e+00" x="4.5052972424014894e+02" y="2.6754067714085721e+02">
+                <paramPoly3 aU="0.0000000000000000e+00" aV="0.0000000000000000e+00" bU="4.3013267215432353e+02" bV="0.0000000000000000e+00" cU="4.3060107369416988e+02" cV="-2.7747811318779355e+02" dU="-3.1841768136090963e+02" dV="1.1200899120010357e+02" pRange="normalized"/>
+            </geometry>
+        </planView>
+        <elevationProfile>
+            <elevation a="1.2081281056404862e+01" b="-3.1697547017640382e-02" c="-1.3552527156068805e-20" d="3.2325646231207729e-08" s="0.0000000000000000e+00"/>
+        </elevationProfile>
+        <lanes>
+            <laneSection s="0.0000000000000000e+00">
+                <center>
+                    <lane id="0" type="none"/>
+                </center>
+                <right>
+                    <lane id="-1" type="driving">
+                        <link>
+                            <predecessor id="-1"/>
+                            <successor id="-3"/>
+                        </link>
+                        <width a="3.7500000000000000e+00" b="0.0000000000000000e+00" c="0.0000000000000000e+00" d="0.0000000000000000e+00" sOffset="0.0000000000000000e+00"/>
+                        <speed max="4.0000000000000000e+01" sOffset="0.0000000000000000e+00" unit="km/h"/>
+                    </lane>
+                    <lane id="-2" type="shoulder">
+                        <link>
+                            <predecessor id="-2"/>
+                            <successor id="-4"/>
+                        </link>
+                        <width a="3.5000000000000000e+00" b="0.0000000000000000e+00" c="0.0000000000000000e+00" d="0.0000000000000000e+00" sOffset="0.0000000000000000e+00"/>
+                        <speed max="4.0000000000000000e+01" sOffset="0.0000000000000000e+00" unit="km/h"/>
+                    </lane>
+                </right>
+            </laneSection>
+        </lanes>
+    </road>
+    <road id="14" junction="-1" length="1.0834558688697396e+03" name="b_0">
+        <link>
+            <predecessor elementId="0" elementType="junction"/>
+            <successor elementId="15" elementType="road"/>
+        </link>
+        <planView>
+            <geometry hdg="2.6331124050520072e+00" length="1.0834558688697396e+03" s="0.0000000000000000e+00" x="9.2963654361427530e+02" y="2.0569951140963303e+02">
+                <paramPoly3 aU="0.0000000000000000e+00" aV="0.0000000000000000e+00" bU="2.4466722659261035e+02" bV="0.0000000000000000e+00" cU="5.8429687501593662e+02" cV="-2.7465339530344254e+03" dU="-1.0680027584919731e+02" dV="2.1300139751616298e+03" pRange="normalized"/>
+            </geometry>
+        </planView>
+        <elevationProfile>
+            <elevation a="0.0000000000000000e+00" b="0.0000000000000000e+00" c="1.2293212649412189e-05" d="-3.7820991768486330e-09" s="0.0000000000000000e+00"/>
+        </elevationProfile>
+        <lanes>
+            <laneSection s="0.0000000000000000e+00">
+                <center>
+                    <lane id="0" type="none"/>
+                </center>
+                <right>
+                    <lane id="-1" type="driving">
+                        <link>
+                            <predecessor id="-3"/>
+                            <successor id="-1"/>
+                        </link>
+                        <width a="3.7500000000000000e+00" b="0.0000000000000000e+00" c="0.0000000000000000e+00" d="0.0000000000000000e+00" sOffset="0.0000000000000000e+00"/>
+                        <speed max="3.0000000000000000e+01" sOffset="0.0000000000000000e+00" unit="km/h"/>
+                    </lane>
+                    <lane id="-2" type="shoulder">
+                        <link>
+                            <predecessor id="-4"/>
+                            <successor id="-2"/>
+                        </link>
+                        <width a="3.5000000000000000e+00" b="0.0000000000000000e+00" c="0.0000000000000000e+00" d="0.0000000000000000e+00" sOffset="0.0000000000000000e+00"/>
+                        <speed max="3.0000000000000000e+01" sOffset="0.0000000000000000e+00" unit="km/h"/>
+                    </lane>
+                </right>
+            </laneSection>
+        </lanes>
+    </road>
+    <road id="15" junction="-1" length="1.1689395436954810e+03" name="b_1">
+        <link>
+            <predecessor elementId="14" elementType="road"/>
+            <successor elementId="3" elementType="junction"/>
+        </link>
+        <planView>
+            <geometry hdg="-2.9628020108984865e+00" length="1.1689395436954810e+03" s="0.0000000000000000e+00" x="5.9898993392818159e+02" y="1.0958064116495677e+03">
+                <paramPoly3 aU="0.0000000000000000e+00" aV="0.0000000000000000e+00" bU="4.0597375702113271e+02" bV="0.0000000000000000e+00" cU="1.0561478126579311e+03" cV="2.6171076806430060e+03" dU="-7.7831670224908089e+02" dV="-1.6818151772645306e+03" pRange="normalized"/>
+            </geometry>
+        </planView>
+        <elevationProfile>
+            <elevation a="9.6204766074870243e+00" b="1.3319153392269358e-02" c="-1.6940658945086007e-21" d="-3.2491612479958733e-09" s="0.0000000000000000e+00"/>
+        </elevationProfile>
+        <lanes>
+            <laneSection s="0.0000000000000000e+00">
+                <center>
+                    <lane id="0" type="none"/>
+                </center>
+                <right>
+                    <lane id="-1" type="driving">
+                        <link>
+                            <predecessor id="-1"/>
+                            <successor id="-3"/>
+                        </link>
+                        <width a="3.7500000000000000e+00" b="0.0000000000000000e+00" c="0.0000000000000000e+00" d="0.0000000000000000e+00" sOffset="0.0000000000000000e+00"/>
+                        <speed max="3.0000000000000000e+01" sOffset="0.0000000000000000e+00" unit="km/h"/>
+                    </lane>
+                    <lane id="-2" type="shoulder">
+                        <link>
+                            <predecessor id="-2"/>
+                            <successor id="-4"/>
+                        </link>
+                        <width a="3.5000000000000000e+00" b="0.0000000000000000e+00" c="0.0000000000000000e+00" d="0.0000000000000000e+00" sOffset="0.0000000000000000e+00"/>
+                        <speed max="3.0000000000000000e+01" sOffset="0.0000000000000000e+00" unit="km/h"/>
+                    </lane>
+                </right>
+            </laneSection>
+        </lanes>
+    </road>
+    <junction id="0">
+        <connection connectingRoad="14" contactPoint="start" id="0" incomingRoad="0">
+            <laneLink from="-4" to="-2"/>
+            <laneLink from="-3" to="-1"/>
+        </connection>
+        <connection connectingRoad="1" contactPoint="start" id="1" incomingRoad="0">
+            <laneLink from="-4" to="-4"/>
+            <laneLink from="-3" to="-3"/>
+            <laneLink from="-2" to="-2"/>
+            <laneLink from="-1" to="-1"/>
+        </connection>
+    </junction>
+    <junction id="1">
+        <connection connectingRoad="12" contactPoint="start" id="0" incomingRoad="6">
+            <laneLink from="-4" to="-2"/>
+            <laneLink from="-3" to="-1"/>
+        </connection>
+        <connection connectingRoad="7" contactPoint="start" id="1" incomingRoad="6">
+            <laneLink from="-4" to="-4"/>
+            <laneLink from="-3" to="-3"/>
+            <laneLink from="-2" to="-2"/>
+            <laneLink from="-1" to="-1"/>
+        </connection>
+    </junction>
+    <junction id="2">
+        <connection connectingRoad="5" contactPoint="start" id="0" incomingRoad="13">
+            <laneLink from="-2" to="-4"/>
+            <laneLink from="-1" to="-3"/>
+        </connection>
+        <connection connectingRoad="5" contactPoint="start" id="1" incomingRoad="4">
+            <laneLink from="-4" to="-4"/>
+            <laneLink from="-3" to="-3"/>
+            <laneLink from="-2" to="-2"/>
+            <laneLink from="-1" to="-1"/>
+        </connection>
+    </junction>
+    <junction id="3">
+        <connection connectingRoad="11" contactPoint="start" id="0" incomingRoad="15">
+            <laneLink from="-2" to="-4"/>
+            <laneLink from="-1" to="-3"/>
+        </connection>
+        <connection connectingRoad="11" contactPoint="start" id="1" incomingRoad="10">
+            <laneLink from="-4" to="-4"/>
+            <laneLink from="-3" to="-3"/>
+            <laneLink from="-2" to="-2"/>
+            <laneLink from="-1" to="-1"/>
+        </connection>
+    </junction>
+</OpenDRIVE>

@@ -1,11 +1,52 @@
+let interchangeClassSelect, interchangeSampleSelect, interchangeSampleImage;
+
 document.addEventListener("DOMContentLoaded", async () => {
-    console.log("hello world.");
+    console.log(mapPathData);
 
-    const errorConfigElements = Array.from(document.getElementsByClassName("error-configs"));
+    interchangeClassSelect = document.getElementById("interchange-class-select");
+    interchangeSampleSelect = document.getElementById("interchange-sample-select");
+    interchangeSampleImage = document.getElementById("interchange-sample-image");
 
-    for (const errorConfigElm of errorConfigElements) {
-        const json = await fetch(errorConfigElm.dataset.configPath).then(res => res.json());
-        errorConfigElm.textContent = JSON.stringify(json, undefined, 4);
+    for (const [classIndex, interchangeFolders] of Object.entries(mapPathData)) {
+        const option = document.createElement("option");
+        option.value = classIndex;
+        option.textContent = classIndex;
+        interchangeClassSelect.appendChild(option);
     }
-    hljs.highlightAll();
+
+    interchangeClassSelect.onchange = onInterchangeClassSelect;
 });
+
+function onInterchangeClassSelect(e) {
+    interchangeSampleSelect.innerHTML = null;
+    interchangeSampleSelect.disabled = true;
+    interchangeSampleSelect.onchange = null;
+
+    const classIndex = e.target.value;
+    if (classIndex === "0") {
+        return;
+    }
+
+    const classMaps = mapPathData[classIndex];
+
+    for (const [sampleIndex, sampleFolder] of classMaps.entries()) {
+        const option = document.createElement("option");
+        option.value = sampleIndex;
+        option.textContent = sampleIndex + 1;
+        interchangeSampleSelect.appendChild(option);
+    }
+    interchangeSampleSelect.onchange = function (e) {
+        onInterchangeSampleSelect(classIndex, e.target.value);
+    };
+    interchangeSampleSelect.disabled = false;
+}
+
+function onInterchangeSampleSelect(classIndex, sampleIndex) {
+    console.log(mapPathData[classIndex][sampleIndex]);
+
+    interchangeSampleImage.innerHTML = null;
+
+    const img = document.createElement("img");
+    img.src = `https://ntutangyun.github.io/highway-interchange-dataset-website/static/maps/${classIndex}/${sampleIndex}/${sampleIndex}.png`;
+    interchangeSampleImage.appendChild(img);
+}

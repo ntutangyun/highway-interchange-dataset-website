@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--generated on 2022-09-05 16:32:04 by generate_rou.py-->
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+    <vTypeDistribution id="fastlane">
+        <vType accel="3.000000" decel="3.000000" emergencyDecel="15" id="fast1" laneChangeModel="SL2015" lcAccelLat="0.5" lcCooperative="1" lcPushy="0" lcSigma="0.1" lcTimeToImpatience="1.2" length="4.3" maxSpeed="30.00" maxSpeedLat="1" minGap="2.5" minGapLat="1" sigma="0" speedFactor="normc(1,0.1,0.30,3.00)" tau="5" vClass="passenger" width="2.2"/>
+        <vType accel="5.000000" decel="5.000000" emergencyDecel="15" id="fast2" laneChangeModel="SL2015" lcAccelLat="0.5" lcCooperative="1" lcPushy="0" lcSigma="0.2" lcTimeToImpatience="1.2" length="4.3" maxSpeed="33.0000" maxSpeedLat="1" minGap="2.5" minGapLat="1" sigma="0" speedFactor="normc(1,0.1,0.30,3.0)" tau="5" vClass="passenger" width="2.2"/>
+    </vTypeDistribution>
+    <vTypeDistribution id="middlelane">
+        <vType accel="5.000000" decel="5.000000" emergencyDecel="15" id="middle_backup" laneChangeModel="SL2015" lcAccelLat="0.5" lcCooperative="1" lcPushy="0" lcSigma="0.2" lcTimeToImpatience="1.2" length="4.3" maxSpeed="26.00" maxSpeedLat="1" minGap="2.5" minGapLat="1" sigma="0" speedFactor="normc(1,0.1,0.30,2.00)" tau="5" vClass="passenger" width="2.2"/>
+        <vType accel="5.000000" decel="5.000000" emergencyDecel="15" id="middle1" laneChangeModel="SL2015" lcCooperative="0" lcSpeedGain="0" length="4.3" maxSpeed="26.00" minGap="2.5" sigma="0" tau="5" vClass="passenger" width="2.2"/>
+        <vType accel="5.000000" decel="5.000000" emergencyDecel="15" id="middle2" laneChangeModel="SL2015" lcAccelLat="0.5" lcCooperative="1" lcPushy="0" lcSigma="0" lcTimeToImpatience="1.2" length="9.6" maxSpeed="28.00" maxSpeedLat="1" minGap="2.5" minGapLat="1" sigma="0" speedFactor="normc(1,0.1,0.30,2.00)" tau="5" vClass="truck" width="3"/>
+    </vTypeDistribution>
+    <vTypeDistribution id="slowlane">
+        <vType accel="5.000000" decel="5.000000" emergencyDecel="15" id="slow1" laneChangeModel="SL2015" lcAccelLat="0.5" lcCooperative="1" lcPushy="0" lcSigma="0.1" lcTimeToImpatience="1.2" length="4.3" maxSpeed="22.00" maxSpeedLat="1" minGap="2.0" minGapLat="1" sigma="0" speedFactor="normc(1,0.1,0.30,2.00)" tau="5" vClass="passenger" width="2.2"/>
+        <vType accel="3.000000" decel="3.000000" emergencyDecel="15" id="slow2" laneChangeModel="SL2015" lcAccelLat="0.5" lcCooperative="1" lcPushy="0" lcSigma="0" lcTimeToImpatience="1.2" length="17.5" maxSpeed="20.00" maxSpeedLat="1" minGap="2.5" minGapLat="1" sigma="0" speedFactor="normc(1,0.1,0.20,3.00)" tau="5" vClass="truck" width="2.8"/>
+    </vTypeDistribution>
+    <flow begin="0" color="0.83,0.39,0.0" departLane="random" departPos="0" departSpeed="0" id="-0_-11" probability="0.05" type="middle1">
+        <route edges="-0 -28 -29 -30 -31 -11"/>
+    </flow>
+    <flow begin="0" color="0.03,0.33,0.83" departLane="random" departPos="0" departSpeed="0" id="-0_-15" probability="0.05" type="middle1">
+        <route edges="-0 -28 -38 -39 -23 -15"/>
+    </flow>
+    <flow begin="0" color="0.7,0.21,0.41" departLane="random" departPos="0" departSpeed="0" id="-0_-3" probability="0.05" type="middle1">
+        <route edges="-0 -1 -2 -3"/>
+    </flow>
+    <flow begin="0" color="0.27,0.42,0.99" departLane="random" departPos="0" departSpeed="0" id="-12_-15" probability="0.05" type="middle1">
+        <route edges="-12 -13 -14 -15"/>
+    </flow>
+    <flow begin="0" color="0.1,0.62,0.56" departLane="random" departPos="0" departSpeed="0" id="-12_-3" probability="0.05" type="middle1">
+        <route edges="-12 -16 -17 -18 -19 -3"/>
+    </flow>
+    <flow begin="0" color="0.51,0.22,0.55" departLane="random" departPos="0" departSpeed="0" id="-12_-7" probability="0.05" type="middle1">
+        <route edges="-12 -16 -32 -33 -27 -7"/>
+    </flow>
+    <flow begin="0" color="0.87,0.18,0.96" departLane="random" departPos="0" departSpeed="0" id="-4_-11" probability="0.05" type="middle1">
+        <route edges="-4 -20 -34 -35 -31 -11"/>
+    </flow>
+    <flow begin="0" color="0.53,0.48,0.14" departLane="random" departPos="0" departSpeed="0" id="-4_-15" probability="0.05" type="middle1">
+        <route edges="-4 -20 -21 -22 -23 -15"/>
+    </flow>
+    <flow begin="0" color="0.24,0.74,0.89" departLane="random" departPos="0" departSpeed="0" id="-4_-7" probability="0.05" type="middle1">
+        <route edges="-4 -5 -6 -7"/>
+    </flow>
+    <flow begin="0" color="0.27,0.36,0.8" departLane="random" departPos="0" departSpeed="0" id="-8_-11" probability="0.05" type="middle1">
+        <route edges="-8 -9 -10 -11"/>
+    </flow>
+    <flow begin="0" color="0.85,0.35,0.23" departLane="random" departPos="0" departSpeed="0" id="-8_-3" probability="0.05" type="middle1">
+        <route edges="-8 -24 -36 -37 -19 -3"/>
+    </flow>
+    <flow begin="0" color="0.28,0.75,0.78" departLane="random" departPos="0" departSpeed="0" id="-8_-7" probability="0.05" type="middle1">
+        <route edges="-8 -24 -25 -26 -27 -7"/>
+    </flow>
+</routes>

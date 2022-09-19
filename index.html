@@ -27,8 +27,33 @@
 
 <div class="container">
     <div class="row my-4">
-        <h2 class="text-center">Website Construction in progress. </h2>
-        <p>Expected to finish within 1 week.</p>
+        <h2 class="text-center">Highway Interchange Dataset</h2>
+    </div>
+    <div class="row">
+        <div class="col">
+            <label for="interchange-class-select">Select Interchange Class</label>
+            <select class="form-select" id="interchange-class-select">
+                <option value="0" selected>-</option>
+                <!--            <option value="1">One</option>-->
+                <!--            <option value="2">Two</option>-->
+                <!--            <option value="3">Three</option>-->
+            </select>
+        </div>
+        <div class="col">
+            <label for="interchange-sample-select">Select Interchange Sample</label>
+            <select class="form-select"
+                    id="interchange-sample-select"
+                    disabled>
+                <!--            <option value="1">One</option>-->
+                <!--            <option value="2">Two</option>-->
+                <!--            <option value="3">Three</option>-->
+            </select>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div id="interchange-sample-image"></div>
+        </div>
     </div>
 </div>
 
@@ -233,6 +258,7 @@
 
 <script src="libs/bootstrap-5.2.0-dist/js/bootstrap.bundle.min.js"></script>
 <script src="libs/highlight.js/highlight.min.js"></script>
+<script src="static/mapPathData.js"></script>
 
 <script src="static/js/index.js"></script>
 </body>

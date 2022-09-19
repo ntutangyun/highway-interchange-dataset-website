@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--generated on 2022-09-02 05:00:49 by generate_cfg.py-->
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+    <input>
+        <net-file value="67511577.net.xml"/>
+        <route-files value="67511577.rou.xml"/>
+    </input>
+    <time>
+        <begin value="0"/>
+        <step-length value="0.1"/>
+        <lateral-resolution value="0.25"/>
+    </time>
+    <gui_only>
+        <delay value="200"/>
+    </gui_only>
+    <random_number>
+        <random value="true"/>
+    </random_number>
+    <processing>
+        <time-to-teleport value="-1"/>
+    </processing>
+</configuration>
