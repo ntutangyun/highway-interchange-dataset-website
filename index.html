@@ -31,26 +31,47 @@
     </div>
     <div class="row">
         <div class="col">
-            <label for="interchange-class-select">Select Interchange Class</label>
-            <select class="form-select" id="interchange-class-select">
-                <option value="0" selected>-</option>
-                <!--            <option value="1">One</option>-->
-                <!--            <option value="2">Two</option>-->
-                <!--            <option value="3">Three</option>-->
-            </select>
+            <div class="row">
+                <div class="col">
+                    <label for="interchange-class-select">Select Interchange Class</label>
+                    <select class="form-select mb-3" id="interchange-class-select">
+                        <option value="0" selected>-</option>
+                        <!--            <option value="1">One</option>-->
+                        <!--            <option value="2">Two</option>-->
+                        <!--            <option value="3">Three</option>-->
+                    </select>
+
+                    <label for="interchange-sample-select">Select Interchange Sample</label>
+                    <select class="form-select mb-3"
+                            id="interchange-sample-select"
+                            disabled>
+                        <!--            <option value="1">One</option>-->
+                        <!--            <option value="2">Two</option>-->
+                        <!--            <option value="3">Three</option>-->
+                    </select>
+                    <p>Download Options</p>
+
+                    <a style="display: none" role="button" href="" download="" class="btn btn-outline-dark mb-1"
+                       id="btn-down-graphml">.graphml
+                    </a>
+                    <a style="display: none" role="button" href="" download="" class="btn btn-outline-dark mb-1"
+                       id="btn-down-net-xml">.net.xml
+                    </a>
+                    <a style="display: none" role="button" href="" download="" class="btn btn-outline-dark mb-1"
+                       id="btn-down-pdf">.pdf</a>
+                    <a style="display: none" role="button" href="" download="" class="btn btn-outline-dark mb-1"
+                       id="btn-down-png">.png</a>
+                    <a style="display: none" role="button" href="" download="" class="btn btn-outline-dark mb-1"
+                       id="btn-down-rou-xml">.rou.xml
+                    </a>
+                    <a style="display: none" role="button" href="" download="" class="btn btn-outline-dark mb-1"
+                       id="btn-down-sumocfg">.sumocfg
+                    </a>
+                    <a style="display: none" role="button" href="" download="" class="btn btn-outline-dark mb-1"
+                       id="btn-down-xodr">.xodr</a>
+                </div>
+            </div>
         </div>
-        <div class="col">
-            <label for="interchange-sample-select">Select Interchange Sample</label>
-            <select class="form-select"
-                    id="interchange-sample-select"
-                    disabled>
-                <!--            <option value="1">One</option>-->
-                <!--            <option value="2">Two</option>-->
-                <!--            <option value="3">Three</option>-->
-            </select>
-        </div>
-    </div>
-    <div class="row">
         <div class="col">
             <div id="interchange-sample-image"></div>
         </div>
