@@ -91,7 +91,8 @@ function onInterchangeSampleSelect(classIndex, sampleIndex) {
 
     interchangeSampleImage.innerHTML = null;
 
-    const baseURL = `static/maps/${classIndex}/${sampleID}/${sampleID}`;
+    // const baseURL = `static/maps/${classIndex}/${sampleID}/${sampleID}`;
+    const baseURL = `https://github.com/ntutangyun/highway-interchange-dataset-website/raw/main/static/maps/${classIndex}/${sampleID}/${sampleID}`;
 
     const img = document.createElement("img");
     img.src = `${baseURL}.png`;
