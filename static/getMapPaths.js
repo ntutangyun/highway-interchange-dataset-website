@@ -7,7 +7,7 @@ const mapPathData = {};
 
 classDirs.forEach(classDir => {
     const classDirPath = path.join("./4_map", classDir);
-    mapPathData[classDir] = fs.readdirSync(classDirPath);
+    mapPathData[classDir] = fs.readdirSync(classDirPath).sort((a, b) => (+a) - (+b));
 });
 
 fs.writeFileSync(path.join(__dirname, "mapPathData.json"), JSON.stringify(mapPathData));
