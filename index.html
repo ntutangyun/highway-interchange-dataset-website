@@ -32,50 +32,56 @@
         </div>
     </div>
 
-    <div class="row">
+    <div class="row align-items-center">
         <div class="col">
             <img src="https://github.com/ntutangyun/highway-interchange-dataset-website/raw/main/static/1_pipeline/01_map.png"
                  class="w-100" alt="">
-            <p class="text-center">Segment Real Interchange Data</p>
         </div>
         <div class="col">
             <img src="https://github.com/ntutangyun/highway-interchange-dataset-website/raw/main/static/1_pipeline/02_feature.png"
                  class="w-100" alt="">
-            <p class="text-center">Extract Topology Feature</p>
         </div>
         <div class="col">
             <img src="https://github.com/ntutangyun/highway-interchange-dataset-website/raw/main/static/1_pipeline/03_topology.png"
                  class="w-100" alt="">
-            <p class="text-center">Visualize Topology Model</p>
         </div>
         <div class="col">
             <img src="https://github.com/ntutangyun/highway-interchange-dataset-website/raw/main/static/1_pipeline/05_sample.gif"
                  class="w-100" alt="">
-            <p class="text-center">Sample Interchange Geometry</p>
         </div>
         <div class="col">
             <img src="https://github.com/ntutangyun/highway-interchange-dataset-website/raw/main/static/1_pipeline/04_OpenDrive.png"
                  class="w-100" alt="">
-            <p class="text-center">Generate map for Simulation</p>
         </div>
     </div>
 
-    <div class="row">
+    <div class="row align-items-center border-bottom">
         <div class="col">
-            <video width="89%" controls class="mx-auto d-block">
-                <source src="https://github.com/ntutangyun/highway-interchange-dataset-website/raw/main/static/1_pipeline/opendrive.mp4"
-                        type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <p class="text-center">Visualization of the generated OpenDRIVE map</p>
+            <p class="text-center mb-4">Segment Real Interchange</p>
+        </div>
+        <div class="col flex-grow-0 p-0 mb-4" style="font-size: 2rem; line-height: 1rem;">
+            →
         </div>
         <div class="col">
-            <video width="100%" controls class="mx-auto d-block">
-                <source src="https://github.com/ntutangyun/highway-interchange-dataset-website/raw/main/static/1_pipeline/sumo.mp4"
-                        type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <p class="text-center">Visualization of the SUMO Throughput Experiment</p>
+            <p class="text-center mb-4">Extract Topology Feature</p>
+        </div>
+        <div class="col flex-grow-0 p-0 mb-4" style="font-size: 2rem; line-height: 1rem;">
+            →
+        </div>
+        <div class="col">
+            <p class="text-center mb-4">Visualize Topology Model</p>
+        </div>
+        <div class="col flex-grow-0 p-0 mb-4" style="font-size: 2rem; line-height: 1rem;">
+            →
+        </div>
+        <div class="col">
+            <p class="text-center mb-4">Sample Interchange Geometry</p>
+        </div>
+        <div class="col flex-grow-0 p-0 mb-4" style="font-size: 2rem; line-height: 1rem;">
+            →
+        </div>
+        <div class="col">
+            <p class="text-center mb-4">Generate map for Simulation</p>
         </div>
     </div>
 </div>
@@ -106,7 +112,7 @@
             </div>
         </div>
     </div>
-    <div class="row">
+    <div class="row border-bottom pb-4">
         <div class="col" id="sample-origin-container">
 
         </div>
@@ -126,51 +132,25 @@
 <div class="container">
     <div class="row my-4">
         <div class="col">
-            <h4 class="text-center">Highway Interchange Dataset (21 Classes)</h4>
-        </div>
-    </div>
-    <div class="row border-bottom">
-        <div class="col">
-            <div class="row">
-                <div class="col">
-                    <label for="interchange-class-select">Select Interchange Class</label>
-                    <select class="form-select mb-3" id="interchange-class-select">
-                        <option value="0" selected>-</option>
-                        <!--            <option value="1">One</option>-->
-                        <!--            <option value="2">Two</option>-->
-                        <!--            <option value="3">Three</option>-->
-                    </select>
-
-                    <label for="interchange-sample-select">Select Interchange Sample</label>
-                    <select class="form-select mb-3"
-                            id="interchange-sample-select"
-                            disabled>
-                        <!--            <option value="1">One</option>-->
-                        <!--            <option value="2">Two</option>-->
-                        <!--            <option value="3">Three</option>-->
-                    </select>
-                    <p>Download Options</p>
-
-                    <a style="display: none" role="button" href="" download="" class="btn btn-outline-dark mb-1"
-                       id="btn-down-net-xml">.net.xml
-                    </a>
-                    <a style="display: none" role="button" href="" download="" class="btn btn-outline-dark mb-1"
-                       id="btn-down-png">.png</a>
-                    <a style="display: none" role="button" href="" download="" class="btn btn-outline-dark mb-1"
-                       id="btn-down-xodr">.xodr</a>
-                </div>
-            </div>
-        </div>
-        <div class="col">
-            <div id="interchange-sample-image"></div>
-        </div>
-    </div>
-</div>
-
-<div class="container">
-    <div class="row my-4">
-        <div class="col">
             <h4 class="text-center">Average Throughput Under Different Traffic Density</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <video width="89%" controls class="mx-auto d-block">
+                <source src="https://github.com/ntutangyun/highway-interchange-dataset-website/raw/main/static/1_pipeline/opendrive.mp4"
+                        type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <p class="text-center">Visualization of the generated OpenDRIVE map</p>
+        </div>
+        <div class="col">
+            <video width="100%" controls class="mx-auto d-block">
+                <source src="https://github.com/ntutangyun/highway-interchange-dataset-website/raw/main/static/1_pipeline/sumo.mp4"
+                        type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <p class="text-center">Visualization of the SUMO Throughput Experiment</p>
         </div>
     </div>
     <div class="row border-bottom">
@@ -340,6 +320,37 @@
         </div>
     </div>
 </div>
+
+
+<div class="container">
+    <div class="row my-4">
+        <div class="col">
+            <h4 class="text-center">Highway Interchange Dataset (21 Classes)</h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="row align-items-center">
+                <div class="col-auto">
+                    <label for="interchange-class-select">Select Interchange Class</label>
+                </div>
+                <div class="col-auto">
+                    <select class="form-select" id="interchange-class-select">
+                        <option value="0" selected>-</option>
+                        <!--            <option value="1">One</option>-->
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div id="interchange-sample-image"></div>
+        </div>
+    </div>
+    <div class="row mb-5" id="class-sample-container">
+
+    </div>
+</div>
+
 
 <script src="libs/bootstrap-5.2.0-dist/js/bootstrap.bundle.min.js"></script>
 <script src="libs/highlight.js/highlight.min.js"></script>
