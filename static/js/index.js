@@ -149,7 +149,7 @@ function onInterchangeClassSelect(e) {
     const classMaps = mapPathData[classIndex];
 
     for (const [sampleIndex, sampleFolder] of classMaps.entries()) {
-        const sampleID = mapPathData[classIndex][sampleFolder];
+        const sampleID = mapPathData[classIndex][sampleIndex];
 
         const sampleContainer = document.createElement("div");
         sampleContainer.className = "col-3";
