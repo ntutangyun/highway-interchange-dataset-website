@@ -3,7 +3,11 @@ let interchangeClassSelect,
     interchangeSampleImage,
     buttonDownloadNetXML,
     buttonDownloadPNG,
-    buttonDownloadXodr;
+    buttonDownloadXodr,
+    sampleOriginContainer,
+    sampleMapContainer,
+    sampleTopologyContainer,
+    sampleSumoContainer;
 
 document.addEventListener("DOMContentLoaded", async () => {
     console.log(mapPathData);
@@ -15,6 +19,11 @@ document.addEventListener("DOMContentLoaded", async () => {
     buttonDownloadPNG = document.getElementById("btn-down-png");
     buttonDownloadXodr = document.getElementById("btn-down-xodr");
 
+    sampleOriginContainer = document.getElementById("sample-origin-container");
+    sampleMapContainer = document.getElementById("sample-map-container");
+    sampleTopologyContainer = document.getElementById("sample-topology-container");
+    sampleSumoContainer = document.getElementById("sample-sumo-container");
+
     for (const [classIndex, interchangeFolders] of Object.entries(mapPathData)) {
         const option = document.createElement("option");
         option.value = classIndex;
@@ -23,7 +32,58 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     interchangeClassSelect.onchange = onInterchangeClassSelect;
+
+    for (let sampleIdx = 1; sampleIdx <= 5; sampleIdx++) {
+        const buttonRadio = document.getElementById(`btnradio${sampleIdx}`);
+        buttonRadio.onclick = () => {
+            onSampleButtonRadioClick(sampleIdx);
+        };
+    }
 });
+
+function onSampleButtonRadioClick(sampleIdx) {
+    console.log(sampleIdx);
+    sampleOriginContainer.innerHTML = null;
+    sampleMapContainer.innerHTML = null;
+    sampleTopologyContainer.innerHTML = null;
+    sampleSumoContainer.innerHTML = null;
+
+    const originImg = document.createElement("img");
+    originImg.src = `https://github.com/ntutangyun/highway-interchange-dataset-website/raw/main/static/2_table/example_${sampleIdx}/origin_${sampleIdx}.png`;
+    originImg.className = "w-100";
+    const originImgDesc = document.createElement("p");
+    originImgDesc.className = "text-center";
+    originImgDesc.textContent = "Real Interchange";
+    sampleOriginContainer.appendChild(originImg);
+    sampleOriginContainer.appendChild(originImgDesc);
+
+    const topologyImg = document.createElement("img");
+    topologyImg.src = `https://github.com/ntutangyun/highway-interchange-dataset-website/raw/main/static/2_table/example_${sampleIdx}/topology_${sampleIdx}.png`;
+    topologyImg.className = "w-100";
+    const topologyImgDesc = document.createElement("p");
+    topologyImgDesc.className = "text-center";
+    topologyImgDesc.textContent = "Topology Model";
+    sampleTopologyContainer.appendChild(topologyImg);
+    sampleTopologyContainer.appendChild(topologyImgDesc);
+
+    const mapImg = document.createElement("img");
+    mapImg.src = `https://github.com/ntutangyun/highway-interchange-dataset-website/raw/main/static/2_table/example_${sampleIdx}/map_${sampleIdx}.png`;
+    mapImg.className = "w-100";
+    const mapImgDesc = document.createElement("p");
+    mapImgDesc.className = "text-center";
+    mapImgDesc.textContent = "Topology Visualization";
+    sampleMapContainer.appendChild(mapImg);
+    sampleMapContainer.appendChild(mapImgDesc);
+
+    const sumoImg = document.createElement("img");
+    sumoImg.src = `https://github.com/ntutangyun/highway-interchange-dataset-website/raw/main/static/2_table/example_${sampleIdx}/sumo_${sampleIdx}.png`;
+    sumoImg.className = "w-100";
+    const sumoImgDesc = document.createElement("p");
+    sumoImgDesc.className = "text-center";
+    sumoImgDesc.textContent = "Sumo Map";
+    sampleSumoContainer.appendChild(sumoImg);
+    sampleSumoContainer.appendChild(sumoImgDesc);
+}
 
 function toggleDownloadButtonDisable(disabled) {
     if (disabled) {
