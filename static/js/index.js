@@ -1,10 +1,5 @@
-let interchangeClassSelect,
-    interchangeSampleImage,
-    sampleOriginContainer,
-    sampleMapContainer,
-    sampleTopologyContainer,
-    sampleSumoContainer,
-    classSampleContainer;
+let interchangeClassSelect, interchangeSampleImage, sampleOriginContainer, sampleMapContainer, sampleTopologyContainer,
+    sampleSumoContainer, classSampleContainer, experimentResultContainer, datasetContainer;
 
 document.addEventListener("DOMContentLoaded", async () => {
     console.log(mapPathData);
@@ -17,6 +12,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     sampleMapContainer = document.getElementById("sample-map-container");
     sampleTopologyContainer = document.getElementById("sample-topology-container");
     sampleSumoContainer = document.getElementById("sample-sumo-container");
+
+    experimentResultContainer = document.getElementById("experiment-result-container");
+    datasetContainer = document.getElementById("dataset-container");
 
     for (const [classIndex, interchangeFolders] of Object.entries(mapPathData)) {
         const option = document.createElement("option");
@@ -35,6 +33,18 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 
     document.getElementById(`btnradio1`).click();
+
+    document.getElementById("btn-experiment-result").onclick = () => {
+        experimentResultContainer.style.display = "block";
+        datasetContainer.style.display = "none";
+    };
+
+    document.getElementById("btn-interchange-dataset").onclick = () => {
+        experimentResultContainer.style.display = "none";
+        datasetContainer.style.display = "block";
+    };
+
+    document.getElementById("btn-experiment-result").click();
 });
 
 function onSampleButtonRadioClick(sampleIdx) {
