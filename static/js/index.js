@@ -115,7 +115,8 @@ function onInterchangeClassSelect(e) {
         sampleContainer.appendChild(sampleImg);
 
         const sampleImgDesc = document.createElement("p");
-        sampleImgDesc.textContent = sampleFolder;
+        // sampleImgDesc.textContent = sampleFolder;
+        sampleImgDesc.textContent = sampleIndex;
         sampleImgDesc.className = "text-center mb-0";
 
         const downloadButtonContainer = document.createElement("div");
